@@ -1,0 +1,60 @@
+// main
+@import 'settings';
+@import 'libs';
+
+
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+  font-family: $Montserrat;
+  color: $text;
+  box-sizing: border-box;
+  position: relative;
+  *{
+    box-sizing: border-box;
+  }
+}
+
+body{
+  height: 100%;
+}
+
+a{
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+button{
+  outline:none;
+  border: none;
+}
+
+input{
+  outline: none;
+}
+
+h1, h2, h3, h4, p{
+  margin: 0;
+  padding: 0;
+}
+
+// import files of blocks [Basic]d
+@import "../../blocks/section/section";
+
+// Index
+@import "../../blocks/header/header";
+@import "../../blocks/hero/hero";
+
+
+
+// Footer :)
+@import "../../blocks/footer/footer";
+
+
+
+// importing media queries
+@import "media";

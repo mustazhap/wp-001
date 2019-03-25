@@ -1,0 +1,20 @@
+.section{
+    display: flex;
+    justify-content: center;
+
+    &__wrapper{
+      width: 1170px;
+
+      &_full{
+        width: 100%;
+      }
+    }
+
+    &__title{
+      font-weight: bold;
+      color: $text;
+      font-size: 28px;
+      text-align: center;
+    }
+  }
+  

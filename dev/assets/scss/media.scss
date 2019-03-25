@@ -1,0 +1,11 @@
+@import 'settings';
+
+@media screen and (max-width: 1200px){
+  .section{
+    &__wrapper{
+       width: 100%;
+       padding-left: 20px;
+       padding-right: 20px;
+    }
+  }
+}
