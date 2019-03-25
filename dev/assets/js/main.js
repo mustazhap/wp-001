@@ -61,8 +61,20 @@ $(".modal__inner").click(function(event){ //popup not hide on text
     });
 
     $("#guests").selectmenu().addClass("overflow");
-    $( "#datepicker" ).datepicker();
-    $( "#datepicker2" ).datepicker();
+    $( "#datepicker" ).datepicker({
+        dateFormat: 'dd-mm-yyyy',
+        minDate: 0,
+        onSelect: function(dateText, inst){
+            $("#datepicker2").datepicker("option","minDate",
+            $("#datepicker").datepicker("getDate"));
+         }
+    });
+    $( "#datepicker2" ).datepicker(
+        {
+            dateFormat: 'dd-mm-yyyy',
+            minDate: 0
+        }
+    );
 
 
   // Menu
