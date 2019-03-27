@@ -61,6 +61,8 @@ $(".modal__inner").click(function(event){ //popup not hide on text
     });
 
     $("#guests").selectmenu().addClass("overflow");
+    $(".select-menu").selectmenu().addClass("overflow");
+
     $( "#datepicker" ).datepicker({
         dateFormat: 'dd-mm-yyyy',
         minDate: 0,
@@ -76,6 +78,28 @@ $(".modal__inner").click(function(event){ //popup not hide on text
         }
     );
 
+    //results
+
+    $( ".radius-slider" ).slider({
+        step: 1,
+        min:1,
+        max: 50,
+        value: 12,
+        change: function( event, ui ) {
+            $(".radius-span").html($( ".radius-slider" ).slider( "value" ))
+        }
+      });
+
+      $( ".price-slider" ).slider({
+        step: 1,
+        min:0,
+        max: 2500,
+        values: [0,2500],
+        change: function( event, ui ) {
+            $(".price-min").html(ui.values[0]);
+            $(".price-max").html(ui.values[1]);
+        }
+      });
 
   // Menu
   $(".jobs__menu").click(function(){
