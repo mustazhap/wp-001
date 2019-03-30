@@ -8,14 +8,18 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="assets/libs/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 
-
 	<title>Site Title: Index</title>
 
 </head>
 <body>
 
 @@include("blocks/header/header-white.html")
-@@include("blocks/single/single.html")
+<section class="section body">
+	<div class="section__wrapper body__wrapper">
+		@@include("blocks/single/single.html")
+		@@include("blocks/aside/aside.html")
+	</div>
+</section>
 
 
 

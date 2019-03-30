@@ -393,6 +393,9 @@
 }
 
 .header-white{
+    opacity: 0.95;
+    position: fixed;
+    background-color: #fff;
     border-bottom: 1px solid #f1f3f7;
     .header__wrapper{
         background-color: #f1f3f7;

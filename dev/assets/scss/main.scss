@@ -9,7 +9,7 @@ html, body{
   height: 100%;
   min-height: 100%;
   font-family: $Montserrat;
-  color: $text;
+  color: #5d6475;
   box-sizing: border-box;
   position: relative;
   *{
@@ -50,6 +50,8 @@ h1, h2, h3, h4, p{
 @import "../../blocks/hero/hero";
 @import "../../blocks/result/result";
 @import "../../blocks/single/single";
+@import "../../blocks/aside/aside";
+
 
 
 
