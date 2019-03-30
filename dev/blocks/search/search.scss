@@ -1,0 +1,21 @@
+.search{
+    height: 515px;
+    margin-top: 70px;
+    width: 100%;
+    background-color: rgba(#3e4453, 0.75);
+
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 70px;
+    }
+
+    &__title{
+        color: white;
+        font-size: 50px;
+        margin-bottom: 70px;
+
+    }
+}
