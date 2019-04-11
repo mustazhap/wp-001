@@ -1,6 +1,20 @@
  $(document).ready(function(){
   var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
+  $( document ).tooltip({
+    position: {
+      my: "center bottom+35",
+      at: "center bottom",
+      using: function( position, feedback ) {
+        $( this ).css( position );
+        $( "<div>" )
+          .addClass( "arrow" )
+          .addClass( feedback.vertical )
+          .addClass( feedback.horizontal )
+          .appendTo( this );
+      }
+    }
+  });
 
   // Lang
   
@@ -50,6 +64,37 @@
 		.on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
     });
     
+
+// Accordion - 
+
+    var allPanels = $(".accordion-panel");
+
+    $(".accordion").click(function(e){
+        allPanels.slideUp();
+        var $this = $(this).parent();
+        if($($this).hasClass("acc-active")){
+            $($this).removeClass("acc-active");
+            $($this).next().slideUp();
+            $(".inbox__message-reply").slideUp();
+        }else{
+            $($this).next().slideDown();
+            $($this).addClass("acc-active");
+        }
+        return false;
+    })
+
+    $(".inbox-reply").click(function(event){
+        var $parent = $(this).parents(".inbox__message-top");
+        if($parent.hasClass("acc-active")){
+            $parent.next().find(".inbox__message-reply").slideDown();
+        }else{
+            $parent.next().find(".inbox__message-reply").show();
+            $parent.next().slideDown();
+            $parent.addClass("acc-active");
+        }
+
+    })
+// Accordion - end
 
 // popup
 $(".pop-button").click(function(){ //popup call-button

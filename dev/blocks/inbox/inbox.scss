@@ -1,0 +1,167 @@
+.inbox{
+    width: 100%;
+    
+    &__wrapper{
+        padding-left: 25px;
+        padding-top: 30px;
+        padding-right: 55px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    &__counter{
+        color: #5d6475;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    &__messages{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__message{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        width: 100%;
+        border-radius: 2px;
+        border: 1px solid #e8ebf0;
+
+        &-top{
+            display: flex;
+            width: 100%;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 20px;
+            cursor: pointer;
+
+            &:hover{
+                background: #f4f6f9;
+            }
+
+            span, strong{
+                color: #5d6475;
+                font-size: 14px;
+            }
+
+            div{
+                height: 100%;
+                display: flex;
+                align-items: center;
+                &:nth-child(1){
+                    width: 33.3%;
+                }
+                &:nth-child(2){
+                    width: 33.3%;
+                }
+                &:nth-child(3){
+                    width: 33.3%;
+                }
+                &:nth-child(4){
+                    width: 72px;
+                    display: flex;
+                    justify-content: flex-end;
+                }
+            }
+
+            .inbox-button{
+                border-left: 1px solid #e8ebf0;
+                width: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                background-color: #f4f6f9;
+                transition: 0.2s all linear;
+                z-index: 99;
+                position: relative;
+
+                &:hover{
+                    text-decoration: none;  
+                    background-color: #4d5567;
+                    border-color: #4d5567;
+                }
+
+
+                i{
+                    color: #bdc4d2;
+                }
+            }
+        }
+
+        &-body{
+            padding: 10px 20px;
+            background: #f4f6f9;
+            width: 100%;
+            border-top: 2px solid #f4f6f9;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            display: none;
+
+            p{
+                font-size: 14px;
+                font-weight: 300;
+                width: 80%;
+                margin-bottom: 30px;
+            }
+        }
+
+        &-title{
+            font-size: 16px;
+            display: block;
+            line-height: 1.3em;
+            margin-bottom: 15px;
+            color: #4d5567;
+            font-weight: 700;
+        }
+
+        &-reply{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            width: 100%;
+            padding-right: 50px;
+            display: none;
+
+            input{
+                width: 100%;
+                margin-bottom: 11px;
+                font-family: 'Arial';
+                font-size: 14px;
+                padding: 11px 0px 11px 11px;
+                color: #1a171b;
+                border: 1px solid #e5e5e5;
+                border-radius: 2px;
+                background-color: #fff;
+                text-align: left;
+                height: 50px;
+                font-weight: 300;
+            }
+
+            textarea{
+                resize: vertical;
+                width: 100%;
+                margin-bottom: 20px;
+                font-family: 'Arial';
+                font-size: 14px;
+                padding: 11px 11px 11px 11px;
+                color: #1a171b;
+                border: 1px solid #e5e5e5;
+                border-radius: 2px;
+                font-weight: lighter;
+                height: 100px;
+                background-color: #fff;
+                text-align: left;
+            }
+
+            button{
+                max-width: 147px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

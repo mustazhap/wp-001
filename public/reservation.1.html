@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="assets/libs/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+
+
+	<title>Site Title: Index</title>
+
+</head>
+<body>
+
+<!-- Header -->
+<header class="header section header-white">
+    <div class="header__wrapper section__wrapper">
+        <div class="header__left">
+       <a href="/" class="header__logo"><img src="assets/img/logo-2.png" alt="Logo"></a>
+       <nav class="header__nav">                            
+           <a href="#!">Хостелы</a>
+           <a href="#!">Коворкинги</a>
+           <a href="#!">Конференц-залы</a>
+           <a href="#!">Ивенты</a>    
+           <a href="#!">О сервисе</a>
+       </nav>
+        <div class="header__lang-wrapper">
+        <div class="header__lang"><span>Язык:</span><img src="assets/img/svg/ru.svg" alt=""></div>
+        <div class="submenu">
+            <a href="#!" class="sub-ru">
+                <img src="assets/img/svg/ru.svg" alt="">
+                <span>Русский</span>
+            </a>
+            <a href="#!" class="sub-uk">
+                <img src="assets/img/svg/uk.svg" alt="">
+                <span>English</span>
+            </a>
+            <a href="#!" class="sub-kz">
+                <img src="assets/img/svg/kz.svg" alt="">
+                <span>Қазақша</span>
+            </a>
+        </div>
+    </div>
+    </div>
+    <div class="header__right">
+        <div class="header__profile">
+            <div class="header__profile-img" style="background-image: url('assets/img/avatar.gif')"></div>
+            <span>User98</span>
+            <i class="fas fa-caret-down"></i>
+        </div>
+       </div>
+</div>
+</header>
+
+<div class="modal modal-auth fade">
+    <div class="modal__inner">
+        <i class="fa fa-times"></i>
+        <div class="modal__top">
+            <h3>Начать список свойств</h3>
+            <span>Пожалуйста, заполните форму входа или зарегистрируйтесь</span>
+        </div>
+        <form class="modal__body">
+            <input type="text" placeholder="имя пользователя">
+            <input type="password" placeholder="пароль">
+            <button>Авторизоваться</button>
+            <div class="modal__row">
+                <a href="#">У вас нет аккаунта?</a> | <a href="#">Забыли пароль?</a> 
+            </div>
+        </form>
+        <div class="modal__bottom"></div>
+    </div>
+</div>
+
+<div class="modal modal-reg fade">
+        <div class="modal__inner">
+            <i class="fa fa-times"></i>
+            <div class="modal__top">
+                <h3>Начать список свойств</h3>
+                <span>Пожалуйста, заполните форму входа или зарегистрируйтесь</span>
+            </div>
+            <form class="modal__body">
+                <input type="text" placeholder="имя пользователя">
+                <input type="text" placeholder="почта">
+                <input type="password" placeholder="пароль">
+                <input type="password" placeholder="повторите пароль">
+                <div class="modal__choose">
+                    <div class="modal__radio">
+                        <input type="radio" id="serviceChoice1"
+                        name="service" value="book" checked>
+                       <label for="serviceChoice1">I only want to book</label>
+                    </div>
+                    <div class="modal__radio">
+                        <input type="radio" id="serviceChoice2"
+                        name="service" value="rent" checked>
+                       <label for="serviceChoice2">I want to rent my property</label>
+                    </div>
+                </div>
+                <div class="modal__select">
+                        <input type="checkbox" name="terms" id="terms">
+                        <label for="terms">I agree with <a href="#!" target="_blank" >terms &amp; conditions</a> </label>
+                </div>
+                <button>Cоздать аккаунт</button>
+                <div class="modal__row">
+                    <a href="#">Уже вступил? Войти в систему!</a> 
+                </div>
+            </form>
+        </div>
+    </div>
+<!-- Header End -->
+
+<section class="abody">
+	<aside class="sidebar">
+    <div class="sidebar-profile">
+        <div class="sidebar-profile__pic" style="background-image: url('assets/img/avatar.gif')">
+        </div>
+        <span>user98</span>
+    </div>
+    <div class="sidebar-nav">
+        <a href="#!" class="nav-active">
+            <i class="fas fa-user"></i>
+            My profile
+        </a>
+        <a href="#!">
+            <i class="fas fa-heart"></i>
+            Favoites
+        </a>
+        <a href="#!">
+            <i class="fas fa-folder-open"></i>
+            My Reservations
+        </a>
+        <a href="#!">
+            <i class="fas fa-inbox"></i>
+            My Inbox
+            <span class="message-count">
+                0
+            </span>
+        </a>
+        <a href="#!">
+            <i class="fas fa-power-off"></i>
+            Log out
+        </a>
+    </div>
+</aside>
+	<section class="reservation">
+        <div class="abody-top">
+            <h1>MY RESERVATIONS</h1>
+            <a href="#!">Front page</a>
+        </div>
+
+        <div class="reservation__wrapper">
+            <div class="reservation__search">
+                <input type="text" placeholder="Search by listing name.">
+                <button class="greenButton">Search</button>
+            </div>
+            <div class="reservation__items">
+                <div class="donthave">You don't have any reservations made!</div>
+                <div class="reservation__item">
+                    <div class="reservation__item-top">
+                        <a href="#!" class="reservation__item-img">
+                            <img src="assets/img/house-2.jpg" alt="">
+                        </a>
+                        <div class="reservation__item-info">
+                            <h3>Тапсырыс сұрауы 30681 for Hostel CASH</h3>
+                            <span><b>Period:</b>24-04-19 <b>to</b> 30-04-19</span>
+                            <span><b>Invoice No:</b>-</span>
+                            <span><b>Guests:</b>3</span>
+                        </div>
+                    </div>
+                    <div class="reservation__item-bottom">
+                        <button class="greenButton grayButton">Request Pending</button>
+                        <button class="greenButton redButton">Cancel Blockung Request</button>
+                    </div>
+                </div>
+
+                <div class="reservation__item">
+                    <div class="reservation__item-top">
+                        <a href="#!" class="reservation__item-img">
+                            <img src="assets/img/house-2.jpg" alt="">
+                        </a>
+                        <div class="reservation__item-info">
+                            <h3>Тапсырыс сұрауы 30681 for Hostel CASH</h3>
+                            <span><b>Period:</b>24-04-19 <b>to</b> 30-04-19</span>
+                            <span><b>Invoice No:</b>-</span>
+                            <span><b>Guests:</b>3</span>
+                        </div>
+                    </div>
+                    <div class="reservation__item-bottom">
+                        <button class="greenButton grayButton">Request Pending</button>
+                        <button class="greenButton redButton">Cancel Blockung Request</button>
+                    </div>
+                </div>
+
+                <div class="reservation__item">
+                    <div class="reservation__item-top">
+                        <a href="#!" class="reservation__item-img">
+                            <img src="assets/img/house-2.jpg" alt="">
+                        </a>
+                        <div class="reservation__item-info">
+                            <h3>Тапсырыс сұрауы 30681 for Hostel CASH</h3>
+                            <span><b>Period:</b>24-04-19 <b>to</b> 30-04-19</span>
+                            <span><b>Invoice No:</b>-</span>
+                            <span><b>Guests:</b>3</span>
+                        </div>
+                    </div>
+                    <div class="reservation__item-bottom">
+                        <button class="greenButton grayButton">Request Pending</button>
+                        <button class="greenButton redButton">Cancel Blockung Request</button>
+                    </div>
+                </div>
+
+                <div class="reservation__item">
+                    <div class="reservation__item-top">
+                        <a href="#!" class="reservation__item-img">
+                            <img src="assets/img/house-2.jpg" alt="">
+                        </a>
+                        <div class="reservation__item-info">
+                            <h3>Тапсырыс сұрауы 30681 for Hostel CASH</h3>
+                            <span><b>Period:</b>24-04-19 <b>to</b> 30-04-19</span>
+                            <span><b>Invoice No:</b>-</span>
+                            <span><b>Guests:</b>3</span>
+                        </div>
+                    </div>
+                    <div class="reservation__item-bottom">
+                        <button class="greenButton grayButton">Request Pending</button>
+                        <button class="greenButton redButton">Cancel Blockung Request</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+	
+</section>
+
+<!-- Footer -->
+<footer class="ez-footer section">
+    <div class="ez-footer__wrapper section__wrapper">
+
+    </div>
+</footer>
+<!-- Footer End -->
+
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+
+
+</body>
+</html>

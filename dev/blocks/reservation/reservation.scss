@@ -35,6 +35,7 @@
             height: 50px;
             max-width: 153px;
             width: 100%;
+            cursor: pointer;
         }
     }
 
@@ -95,7 +96,7 @@
 
             button{
                 height: 50px;
-    
+                cursor: pointer;
                 &:hover{
                     opacity: 0.8;
                 }
@@ -104,6 +105,14 @@
                 color: #8A8F9A;
                 cursor: default;
                 margin-right: 15px;
+
+                &:hover{
+                    opacity: 1;
+                }
+            }
+
+            .redButton{
+                max-width: 225px;
             }
 
         }
