@@ -139,6 +139,32 @@
         }
     }
 
+    &__profile{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &-img{
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            border: 1px solid #838895;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+
+        span{
+            padding-right: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #4d5567;
+            padding-left: 10px;
+        }
+        i{
+            color: #D3D4D6;
+        }
+    }
+
     &__auth{
         a{
             font-weight: 500;
