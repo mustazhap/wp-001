@@ -33,7 +33,7 @@ button{
   border: none;
 }
 
-input{
+input, textarea{
   outline: none;
 }
 
@@ -41,6 +41,8 @@ h1, h2, h3, h4, p{
   margin: 0;
   padding: 0;
 }
+
+// настройки еще инпут исте осд дан
 
 // import files of blocks [Basic]d
 @import "../../blocks/section/section";
@@ -53,12 +55,16 @@ h1, h2, h3, h4, p{
 @import "../../blocks/aside/aside";
 @import "../../blocks/search/search";
 @import "../../blocks/catalog/catalog";
+@import "../../blocks/sidebar/sidebar";
+@import "../../blocks/profile/profile";
 
 
 
 
 
 
+
+// включи нормалайз css
 
 
 // Footer :)

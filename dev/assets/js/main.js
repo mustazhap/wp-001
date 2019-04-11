@@ -11,6 +11,45 @@
     $(".submenu").hide().removeClass("submenu_active");
     })
 
+    $( '.inputfile' ).each( function()
+	{
+		var $input	 = $( this ),
+			$label	 = $input.next( 'label' ),
+			labelVal = $label.html();
+
+		$input.on( 'change', function( e )
+		{
+            console.log("filename");
+			var fileName = '';
+
+			if( this.files && this.files.length > 1 )
+				fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+			else if( e.target.value )
+				fileName = e.target.value.split( '\\' ).pop();
+
+                function truncate(n, len) {
+                    var ext = n.substring(n.lastIndexOf(".") + 1, n.length).toLowerCase();
+                    var filename = n.replace('.' + ext,'');
+                    if(filename.length <= len) {
+                        return n;
+                    }
+                    filename = filename.substr(0, len) + (n.length > len ? '...' : '');
+                    return filename + '.' + ext;
+                };
+
+			if( fileName.length ){
+				$label.html(truncate(fileName,10) );
+            }
+			else
+				$label.html( labelVal );
+		});
+
+		// Firefox bug fix
+		$input
+		.on( 'focus', function(){ $input.addClass( 'has-focus' ); })
+		.on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
+    });
+    
 
 // popup
 $(".pop-button").click(function(){ //popup call-button
@@ -304,34 +343,6 @@ $(".textarea").click(function(event){
 
 // 
 
-// File Upload
-$( '.file' ).each( function()
-	{
-		var $input	 = $( this ),
-			$label	 = $input.next( 'label' ),
-			labelVal = $label.html();
-
-		$input.on( 'change', function( e )
-		{
-			var fileName = '';
-
-			if( this.files && this.files.length > 1 )
-				fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
-			else if( e.target.value )
-				fileName = e.target.value.split( '\\' ).pop();
-
-			if( fileName )
-				$label.find( 'span' ).html( fileName );
-			else
-				$label.html( labelVal );
-		});
-
-		// Firefox bug fix
-		$input
-		.on( 'focus', function(){ $input.addClass( 'has-focus' ); })
-		.on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
-    });
-// 
 
 // Popup - Apply for Job
 
