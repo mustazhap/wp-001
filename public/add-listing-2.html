@@ -123,6 +123,18 @@
             My profile
         </a>
         <a href="#!">
+            <i class="fas fa-map-marker"></i>
+            My Listings
+        </a>
+        <a href="#!">
+            <i class="fas fa-plus"></i>
+            Add New Listing
+        </a>
+        <a href="#!">
+            <i class="far fa-calendar-alt"></i>
+            All In One Calendar
+        </a>
+        <a href="#!">
             <i class="fas fa-heart"></i>
             Favoites
         </a>
@@ -138,138 +150,149 @@
             </span>
         </a>
         <a href="#!">
+            <i class="far fa-file"></i>
+            Invoices
+        </a>
+        <a href="#!">
             <i class="fas fa-power-off"></i>
             Log out
         </a>
     </div>
 </aside>
-    <section class="profile">
+    <section class="listing">
     <div class="abody-top">
-        <h1>MY PROFILE</h1>
-        <a href="#!">Front page</a>
+        <div class="listing-steps">
+
+        </div>
     </div>
-    <form class="profile__details">
-        <h2>Your details</h2>
-        <div class="profile__wrapper">
-            <div class="profile__col">
-                <div class="profile__input">
-                    <label for="firstname">First Name</label>
-                    <input type="text" class="input" id="firstname">
-                </div>
-                <div class="profile__input">
-                    <label for="lastname">Last Name</label>
-                    <input type="text" class="input" id="lastname">
-                </div>
-                <div class="profile__input">
-                    <label for="email">Email</label>
-                    <input type="text" class="input" id="email">
-                </div>
-                <div class="profile__input">
-                    <label for="about">About</label>
-                    <textarea name="about" id="" cols="30" rows="10" class="about-textarea"></textarea>
-                </div>
-                <div class="profile__input">
-                    <label for="live">I live in</label>
-                    <input type="text" class="input" id="live">
-                </div>
-                <div class="profile__input">
-                    <label for="lamguage">I speak</label>
-                    <input type="text" class="input" id="lamguage">
-                </div>
-                <div class="profile__input">
-                    <label for="payment">Payment Info/Hidden Field</label>
-                    <textarea name="payment" id="" cols="30" rows="10" class="payment-textarea"></textarea>
-                </div>
-                <div class="profile__input">
-                    <label for="recive-email">Email for receiving Paypal Payments (booking fees, refund security fees, etc)</label>
-                    <input type="text" class="input" id="recive-email">
-                </div>
+    <form class="listing__wrapper">
+        <h2>Listing Price</h2>
+        <div class="listing__attn">
+            <span>These fields are mandatory: Main Category, Second Category, Listing Price</span>
+        </div>
+        <div class="listing__row">
+            <div class="listing__col cl3">
+                <h3>Price per night ₸ (only numbers)</h3>
             </div>
-            <div class="profile__col">
-                <div class="profile__input">
-                    <label for="phone">Phone</label>
-                    <input type="text" class="input" id="phone">
-                </div>
-                <div class="profile__input">
-                    <label for="mobile">Mobile (*Add the country code format Ex :+1 232 3232)</label>
-                    <input type="text" class="input" id="mobile">
-                </div>
-                <div class="profile__input">
-                    <label for="skype">Skype</label>
-                    <input type="text" class="input" id="skype">
-                </div>
-                <div class="profile__input">
-                    <label for="facebook">Facebook Url</label>
-                    <input type="text" class="input" id="facebook">
-                </div>
-                <div class="profile__input">
-                    <label for="twitter">Twitter Url</label>
-                    <input type="text" class="input" id="twitter">
-                </div>
-                <div class="profile__input">
-                    <label for="linkedin">Linkedin Url</label>
-                    <input type="text" class="input" id="linkedin">
-                </div>
-                <div class="profile__input">
-                    <label for="pinterest">Pinterest Url</label>
-                    <input type="text" class="input" id="pinterest">
-                </div>
+            <div class="listing__col cl3">
+                <label for="pernight">Price per night</label>
+                <input type="text" id="pernight">
             </div>
-            <div class="profile__col">
-                <div class="profile__upload">
-                    <img src="assets/img/avatar.gif" alt="">
-                    <div class="profile__file">
-                        <input type="file" class="inputfile inputfile-1" id="avatar">
-                        <label for="avatar">Upload Image</label>
-                    </div>
-                    <span class="profile-attn">* recommended size: minimum 550px</span>
-                </div>
-                <div class="profile__upload">
-                    <img src="assets/img/avatar.gif" alt="">
-                    <div class="profile__file">
-                        <input type="file" class="inputfile inputfile-1" id="scan">
-                        <label for="scan">Upload an ID Scan</label>
-                    </div>
-                    <span class="profile-attn">* recommended size: minimum 550px</span>
-                </div>
+            <div class="listing__col cl3">
+                <label for="before">Before Label</label>
+                <input type="text" id="before">
+            </div>
+            <div class="listing__col cl3">
+                <label for="after">After Label</label>
+                <input type="text" id="after">
             </div>
         </div>
-        <div class="profile__buttons">
-            <button class="greenButton">
-                Update profile
-            </button>
-            <button class="greenButton">
-                Delete account
-            </button>
-        </div>
-    </form>
-    <form class="profile__details">
-        <h2>Change Password</h2>
-        <span class="main-attn">*After you change the password you will have to login again.</span>
-        <div class="profile__wrapper">
-            <div class="profile__col">
-                <div class="profile__input">
-                    <label for="old-password">Old Password</label>
-                    <input type="text" class="input" id="old-password">
-                </div>
+        <div class="listing__row">
+            <div class="listing__col cl3">
+                <h3>Category and Listed In/Room Type</h3>
             </div>
-            <div class="profile__col">
-                <div class="profile__input">
-                    <label for="new-password">New Password</label>
-                    <input type="text" class="input" id="new-password">
-                </div>
+            <div class="listing__col cl3">
+                <label for="category">Category</label>
+                <select name="types" class="select-menu" id="category"> 
+                    <option value="all" selected="selected">None</option>
+                    <option value="Apartment">Apartment</option>
+                    <option value="B & B">B & B</option>
+                    <option value="Cabin">Cabin</option>
+                    <option value="Condos">Condos</option>
+                    <option value="Daily">Daily</option>
+                    <option value="Dorm">Dorm</option>
+                    <option value="Hourly">Hourly</option>
+                    <option value="House">House</option>
+                    <option value="Villa">Villa</option>
+                </select>
             </div>
-            <div class="profile__col">
-                <div class="profile__input">
-                    <label for="confirm-password">Confirm New Password</label>
-                    <input type="text" class="input" id="confirm-password">
-                </div>
+            <div class="listing__col cl3">
+                <label for="type">Listed In/Room Type</label>
+                <select name="size" class="select-menu" id="type">
+                    <option value="all" selected="selected">None</option>
+                    <option value="Entire Home">Entire Home</option>
+                    <option value="Hostel">Hostel</option>
+                    <option value="Private Room">Private Room</option>
+                    <option value="Shared Room">Shared Room</option>
+                </select>
             </div>
         </div>
-        <div class="profile__buttons">
+        <div class="listing__row">
+            <div class="listing__col cl3">
+                <h3>Guest No</h3>
+            </div>
+            <div class="listing__col cl3">
+                <label for="guest">Guest No (mandatory)</label>
+                <select name="guests" class="select-menu">
+                    <option value="many" selected="selected">Любой</option>
+                    <option value="1">1 гость</option>
+                    <option value="2">2 гости</option>
+                    <option value="3">3 гости</option>
+                    <option value="4">4 гости</option>
+                    <option value="5">5 гости</option>
+                    <option value="6">6 гости</option>
+                    <option value="7">7 гости</option>
+                    <option value="8">8 гости</option>
+                    <option value="9">9 гости</option>
+                    <option value="10">10 гости</option>
+                    <option value="11">11 гости</option>
+                    <option value="12">12 гости</option>
+                    <option value="13">13 гости</option>
+                    <option value="14">14 гости</option>
+                    <option value="15">15 гости</option>
+                </select>
+            </div>
+        </div>
+        <div class="listing__row">
+            <div class="listing__col cl3">
+                <h3>City and Neighborhood</h3>
+            </div>
+            <div class="listing__col cl3">
+                <label for="city">City (mandatory)</label>
+                <input type="text" id="city">
+            </div>
+            <div class="listing__col cl3">
+                <label for="area">Neighborhood / Area</label>
+                <input type="text" id="area">
+            </div>
+        </div>
+        <div class="listing__row">
+            <div class="listing__col cl3">
+                <h3>Country</h3>
+            </div>
+            <div class="listing__col cl3">
+                <label for="country">Country</label>
+                <select name="country" class="select-menu" id="country">
+                    <option value="ru">Russia</option>
+                    <option value="en">England</option>
+                    <option value="kz" selected="selected">Kazakhstan</option>
+                    <option value="africa">Africa</option>
+                    <option value="usa">USA</option>
+                </select>
+            </div>
+        </div>
+        <div class="listing__row">
+            <div class="listing__col cl3">
+                <h3>Property Description</h3>
+            </div>
+            <div class="listing__col cl6">
+                <label for="description">Property Description</label>
+                <textarea name="description" id="description" cols="30" rows="40"></textarea>
+            </div>
+        </div>
+        <div class="listing__row">
+            <div class="listing__select">
+                <input type="checkbox" name="terms" id="book">
+                <label for="book">Allow instant booking? If checked, you will not have the option to reject a booking request.</label>
+            </div>
+        </div>
+        <div class="listing__row">
             <button class="greenButton">
-                Reset Password
+                Save
             </button>
+        </div>
+        <div class="listing__row">
+            <a href="#!" class="listing__go">Go to Price settings.</a>
         </div>
     </form>
 </section>
