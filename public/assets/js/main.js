@@ -19,54 +19,53 @@
   // Lang
   
   $(".header__lang-wrapper").mouseenter(function(){
-      $(".submenu").show().addClass("submenu_active");
+    $(".submenu").show().addClass("submenu_active");
+})
+$(".header__lang-wrapper, .submenu").mouseleave(function(){
+  $(".submenu").hide().removeClass("submenu_active");
   })
-  $(".header__lang-wrapper, .submenu").mouseleave(function(){
-    $(".submenu").hide().removeClass("submenu_active");
-    })
 
-    $( '.inputfile' ).each( function()
-	{
-		var $input	 = $( this ),
-			$label	 = $input.next( 'label' ),
-			labelVal = $label.html();
+  $( '.inputfile' ).each( function()
+  {
+      var $input	 = $( this ),
+          $label	 = $input.next( 'label' ),
+          labelVal = $label.html();
 
-		$input.on( 'change', function( e )
-		{
-            console.log("filename");
-			var fileName = '';
+      $input.on( 'change', function( e )
+      {
+          console.log("filename");
+          var fileName = '';
 
-			if( this.files && this.files.length > 1 )
-				fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
-			else if( e.target.value )
-				fileName = e.target.value.split( '\\' ).pop();
+          if( this.files && this.files.length > 1 )
+              fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+          else if( e.target.value )
+              fileName = e.target.value.split( '\\' ).pop();
 
-                function truncate(n, len) {
-                    var ext = n.substring(n.lastIndexOf(".") + 1, n.length).toLowerCase();
-                    var filename = n.replace('.' + ext,'');
-                    if(filename.length <= len) {
-                        return n;
-                    }
-                    filename = filename.substr(0, len) + (n.length > len ? '...' : '');
-                    return filename + '.' + ext;
-                };
+              function truncate(n, len) {
+                  var ext = n.substring(n.lastIndexOf(".") + 1, n.length).toLowerCase();
+                  var filename = n.replace('.' + ext,'');
+                  if(filename.length <= len) {
+                      return n;
+                  }
+                  filename = filename.substr(0, len) + (n.length > len ? '...' : '');
+                  return filename + '.' + ext;
+              };
 
-			if( fileName.length ){
-				$label.html(truncate(fileName,10) );
-            }
-			else
-				$label.html( labelVal );
-		});
+          if( fileName.length ){
+              $label.html(truncate(fileName,10) );
+          }
+          else
+              $label.html( labelVal );
+      });
 
-		// Firefox bug fix
-		$input
-		.on( 'focus', function(){ $input.addClass( 'has-focus' ); })
-		.on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
-    });
+      // Firefox bug fix
+      $input
+      .on( 'focus', function(){ $input.addClass( 'has-focus' ); })
+      .on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
+  });
     
 
 // Accordion - 
-
     var allPanels = $(".accordion-panel");
 
     $(".accordion").click(function(e){
@@ -116,33 +115,33 @@ $(".modal__inner").click(function(event){ //popup not hide on text
 // popup-end
 
 // autocomplete
-    var availableTags = [
-      "ActionScript",
-      "AppleScript",
-      "Asp",
-      "BASIC",
-      "C",
-      "C++",
-      "Clojure",
-      "COBOL",
-      "ColdFusion",
-      "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
-      "Python",
-      "Ruby",
-      "Scala",
-      "Scheme"
-    ];
-    $( "#search" ).autocomplete({
-      source: availableTags
-    });
+var availableTags = [
+    "ActionScript",
+    "AppleScript",
+    "Asp",
+    "BASIC",
+    "C",
+    "C++",
+    "Clojure",
+    "COBOL",
+    "ColdFusion",
+    "Erlang",
+    "Fortran",
+    "Groovy",
+    "Haskell",
+    "Java",
+    "JavaScript",
+    "Lisp",
+    "Perl",
+    "PHP",
+    "Python",
+    "Ruby",
+    "Scala",
+    "Scheme"
+  ];
+  $( "#search" ).autocomplete({
+    source: availableTags
+  });
 
     $("#guests").selectmenu().addClass("overflow");
     $(".select-menu").selectmenu().addClass("overflow");
@@ -153,8 +152,10 @@ $(".modal__inner").click(function(event){ //popup not hide on text
         { Title: "Meeting with manager", Date: new Date("03/01/2011") }
     ];
 
+
+    // datapicker
     $( ".datepicker" ).datepicker({
-        dateFormat: 'dd-mm-yyyy',
+        dateFormat: 'yy-mm-dd',
         minDate: 0,
         onSelect: function(dateText, inst){
             var $this = $("this");
@@ -178,7 +179,7 @@ $(".modal__inner").click(function(event){ //popup not hide on text
       });
     $( ".datepicker2" ).datepicker(
         {
-            dateFormat: 'dd-mm-yyyy',
+            dateFormat: 'yy-mm-dd',
             minDate: 0
         }
     );
@@ -206,25 +207,7 @@ $(".modal__inner").click(function(event){ //popup not hide on text
         }
       });
 
-  // Menu
-  $(".jobs__menu").click(function(){
-    if($(this).hasClass("animated")){
-      $(".sidebar").css("left", "0");
-        if (w > 600){
-        $(this).css("left","360px").removeClass("animated").find("i").css("transform", "rotate(180deg)");
-        }else{
-            $(this).css({"left":"90%"}).removeClass("animated").find("i").css("transform", "rotate(180deg)");
-            $("body").css("overflow","hidden");
-        }
-    }else{
-      // $("body").css("overflow-x", "visible");
-      $(".sidebar").css("left", "-100%");
-      $("body").css("overflow","auto");
-      // $(".jobs").css({"position": "relative", "left": "0px"});
-      $(this).css("left","15px").addClass("animated").find("i").css("transform", "rotate(0)");  
-    }
-  });
-// 
+
 
 // spoiler
 
@@ -232,7 +215,7 @@ $('.spoiler-text').hide()
 $('.spoiler').click(function(){
     $(this).toggleClass("folded").toggleClass("unfolded").next().slideToggle()
 })
-        
+});     
 
 // Calendar 
 function Calendar2(id, year, month) {
@@ -376,54 +359,3 @@ Calendar3("calendar3", document.querySelector('#calendar3 thead td:nth-child(2)'
 // 
 
 
-// Textarea
-$(".textarea").click(function(event){
-    if($(".contact__mail").css("right") == "10px"){
-        $(".contact__mail").css({"opacity":"0", "visibility":"hidden"});
-    }
-    $(document).click(function() {
-        $(".contact__mail").css({"opacity":"1", "visibility":"visible"});
-    });
-})
-
-// 
-
-
-// Popup - Apply for Job
-
-    $(".apply-button").click(function(){
-        $(".apply").show().css("display", "flex");
-        $("body").css("overflow", "hidden");
-    });
-    $(".apply__wrapper").click(function(event){
-        event.stopPropagation();        
-    });
-    $(".fa-times").click(function(){
-        $(".apply").hide();
-        $("body").css("overflow", "auto");
-        
-    });
-    $(".apply").click(function(){
-        $(".apply").hide();
-        $("body").css("overflow", "auto");
-
-    });
-});
-// 
-
-// Spoiler
-$(".spoiler__title").click(function(){
-    $(this).toggleClass("spoiler__title-active");
-    $(this).next().slideToggle();
-})
-
-// 
-
-// Filter
-$(".filter-show").click(function(){
-    $(".search__col").slideToggle();
-});
-
-$(".filter-cancel").click(function(){
-    $(".search__col").slideToggle();
-});
