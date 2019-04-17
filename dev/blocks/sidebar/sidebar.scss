@@ -97,4 +97,21 @@
             } 
         }
     }
+
+    &-sub{
+        background-color: #313643;
+        border-color: #313643 !important;
+
+        i{
+            opacity: 0;
+        }
+
+        &:hover{
+            border-color: #313643 !important;
+        }
+    }
+
+    .sub-active{
+        color: #d5dbea;
+    }
 }

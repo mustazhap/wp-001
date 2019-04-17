@@ -45,12 +45,12 @@
     </div>
     </div>
     <div class="header__right">
-       <div class="header__auth">
-            <a href="#!" class="pop-button auth" rel="modal-auth">Вход</a>
-            <a href="#!" class="pop-button reg" rel="modal-reg">Регистрация</a>
+        <div class="header__profile">
+            <div class="header__profile-img" style="background-image: url('assets/img/avatar.gif')"></div>
+            <span>User98</span>
+            <i class="fas fa-caret-down"></i>
         </div>
-        <a href="#!" class="header__button">Отправить недвижимость</a>
-    </div>
+       </div>
 </div>
 </header>
 
@@ -123,48 +123,6 @@
             My profile
         </a>
         <a href="#!">
-            <i class="fas fa-map-marker"></i>
-            My Listings
-        </a>
-        <a href="#!">
-            <i class="fas fa-plus"></i>
-            Add New Listing
-        </a>
-        <!-- Sub navigation fo -->
-        <a href="#!" class="sidebar-sub">
-            <i class="fas fa-plus"></i>
-            Description
-        </a>
-        <a href="#!" class="sidebar-sub sub-active">
-            <i class="fas fa-plus"></i>
-            Price
-        </a>
-        <a href="#!" class="sidebar-sub">
-            <i class="fas fa-plus"></i>
-            Images
-        </a>
-        <a href="#!" class="sidebar-sub">
-            <i class="fas fa-plus"></i>
-            Details
-        </a>
-        <a href="#!" class="sidebar-sub">
-            <i class="fas fa-plus"></i>
-            Location
-        </a>
-        <a href="#!" class="sidebar-sub">
-            <i class="fas fa-plus"></i>
-            Amenities
-        </a>
-        <a href="#!" class="sidebar-sub">
-            <i class="fas fa-plus"></i>
-            Calendar
-        </a>
-        <!-- Sub nav end of -->
-        <a href="#!">
-            <i class="far fa-calendar-alt"></i>
-            All In One Calendar
-        </a>
-        <a href="#!">
             <i class="fas fa-heart"></i>
             Favoites
         </a>
@@ -180,77 +138,99 @@
             </span>
         </a>
         <a href="#!">
-            <i class="far fa-file"></i>
-            Invoices
-        </a>
-        <a href="#!">
             <i class="fas fa-power-off"></i>
             Log out
         </a>
     </div>
 </aside>
-    <section class="listing">
-    <div class="abody-top">
-        <div class="listing-steps">
-            <a href="#!" class="step-past">Description</a>
-            <a href="#!" class="step-past">Price</a>
-            <a href="#!" class="step-active">Images</a>
-            <a href="#!" class="step">Details</a>
-            <a href="#!" class="step">Location</a>
-            <a href="#!" class="step">Amenities</a>
-            <a href="#!" class="step">Calendar</a>
+	<section class="reservation">
+        <div class="abody-top">
+            <h1>MY RESERVATIONS</h1>
+            <a href="#!">Front page</a>
         </div>
-    </div>
-    <form class="listing__wrapper">
-        <h2>Listing Media</h2>
-        <div class="listing__attn">
-            <span>These fields are mandatory: Main Category, Second Category, Listing Price</span>
-        </div>
-        <div class="listing__row listing__col">
-                <div class="sortable listingPics">
-                    
-                </div>
-                <div class="timediv">
-                
-                    <div class="fileButton_img">
-                        <a class="img-delete">
-                            <i class="far fa-trash-alt"></i>
-                        </a>
-                        <img id="img" src="#" alt="your image" />
-                    </div>
 
-                    <div class="fileButton">
-                            <input type='file' id="imgInp" multiple />
-                        <label class="greenButton" for="imgInp" >Select Media</label>
+        <div class="reservation__wrapper">
+            <div class="reservation__search">
+                <input type="text" placeholder="Search by listing name.">
+                <button class="greenButton">Search</button>
+            </div>
+            <div class="reservation__items">
+                <div class="donthave">You don't have any reservations made!</div>
+                <div class="reservation__item">
+                    <div class="reservation__item-top">
+                        <a href="#!" class="reservation__item-img">
+                            <img src="assets/img/house-2.jpg" alt="">
+                        </a>
+                        <div class="reservation__item-info">
+                            <h3>Тапсырыс сұрауы 30681 for Hostel CASH</h3>
+                            <span><b>Period:</b>24-04-19 <b>to</b> 30-04-19</span>
+                            <span><b>Invoice No:</b>-</span>
+                            <span><b>Guests:</b>3</span>
+                        </div>
                     </div>
-                
-            </div>
-        </div>
-        <div class="listing__row">
-            <div class="listing__col cl3">
-                <label for="category">Video from</label>
-                <select name="types" class="select-menu" id="category"> 
-                    <option value="youtube" selected="selected">Youtube</option>
-                    <option value="vimeo">Vimeo</option>
-                </select>
-            </div>
-            <div class="listing__col cl3">
-                    <label for="video-url">Video ID:</label>
-                    <input type="text" id="video-url">
+                    <div class="reservation__item-bottom">
+                        <button class="greenButton grayButton">Request Pending</button>
+                        <button class="greenButton redButton">Cancel Blockung Request</button>
+                    </div>
                 </div>
+
+                <div class="reservation__item">
+                    <div class="reservation__item-top">
+                        <a href="#!" class="reservation__item-img">
+                            <img src="assets/img/house-2.jpg" alt="">
+                        </a>
+                        <div class="reservation__item-info">
+                            <h3>Тапсырыс сұрауы 30681 for Hostel CASH</h3>
+                            <span><b>Period:</b>24-04-19 <b>to</b> 30-04-19</span>
+                            <span><b>Invoice No:</b>-</span>
+                            <span><b>Guests:</b>3</span>
+                        </div>
+                    </div>
+                    <div class="reservation__item-bottom">
+                        <button class="greenButton grayButton">Request Pending</button>
+                        <button class="greenButton redButton">Cancel Blockung Request</button>
+                    </div>
+                </div>
+
+                <div class="reservation__item">
+                    <div class="reservation__item-top">
+                        <a href="#!" class="reservation__item-img">
+                            <img src="assets/img/house-2.jpg" alt="">
+                        </a>
+                        <div class="reservation__item-info">
+                            <h3>Тапсырыс сұрауы 30681 for Hostel CASH</h3>
+                            <span><b>Period:</b>24-04-19 <b>to</b> 30-04-19</span>
+                            <span><b>Invoice No:</b>-</span>
+                            <span><b>Guests:</b>3</span>
+                        </div>
+                    </div>
+                    <div class="reservation__item-bottom">
+                        <button class="greenButton grayButton">Request Pending</button>
+                        <button class="greenButton redButton">Cancel Blockung Request</button>
+                    </div>
+                </div>
+
+                <div class="reservation__item">
+                    <div class="reservation__item-top">
+                        <a href="#!" class="reservation__item-img">
+                            <img src="assets/img/house-2.jpg" alt="">
+                        </a>
+                        <div class="reservation__item-info">
+                            <h3>Тапсырыс сұрауы 30681 for Hostel CASH</h3>
+                            <span><b>Period:</b>24-04-19 <b>to</b> 30-04-19</span>
+                            <span><b>Invoice No:</b>-</span>
+                            <span><b>Guests:</b>3</span>
+                        </div>
+                    </div>
+                    <div class="reservation__item-bottom">
+                        <button class="greenButton grayButton">Request Pending</button>
+                        <button class="greenButton redButton">Cancel Blockung Request</button>
+                    </div>
+                </div>
+            </div>
         </div>
-       
-       
-        <div class="listing__row">
-            <button class="greenButton">
-                Save
-            </button>
-        </div>
-        <div class="listing__row">
-            <a href="#!" class="listing__go">Go to Details settings.</a>
-        </div>
-    </form>
 </section>
+	
 </section>
 
 <!-- Footer -->

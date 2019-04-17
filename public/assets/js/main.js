@@ -9,7 +9,7 @@
   
       reader.onload = function(e) {
         $('#img').attr('src', e.target.result);
-        $('.fileButton_img').show();
+        $('.fileButton_img').show().css("display", "flex");
       }
   
       reader.readAsDataURL(input.files[0]);
