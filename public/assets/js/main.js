@@ -1,6 +1,33 @@
  $(document).ready(function(){
   var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
+
+  // fileupload имаге - image
+  function readURL(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+  
+      reader.onload = function(e) {
+        $('#img').attr('src', e.target.result);
+        $('.fileButton_img').show();
+      }
+  
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+  
+  $("#imgInp").change(function() {
+    readURL(this);
+  });
+
+  $(".img-delete").click(function(){
+    $('#img').attr('src', '');
+    $('.fileButton_img').hide();
+
+  })
+  
+
+  // tooltip
   $( document ).tooltip({
     position: {
       my: "center bottom+35",

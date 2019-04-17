@@ -13,6 +13,70 @@
         padding-left: 15px;
         padding-right: 15px;
     }
+
+    &-steps{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        .step-active{
+            color: $green;
+            font-weight: 400;
+
+            &:after{
+                background-color: $green;
+            }
+        }
+        .step-past{
+
+            &:after{
+                background-color: $green;
+            }
+
+            &:before{
+                background-color: $green;
+            }
+        }
+
+        a{
+            padding: 17px 40px 17px 40px;
+            color: #8A8F9A;
+            font-size: 14px;
+            font-weight: 300;
+            position: relative;
+
+            &:after{
+                border-radius: 50%;
+                width: 10px;
+                height: 10px;
+                background-color: #dee2e8;
+                border: 3px solid #F6F6F6;
+                position: absolute;
+                top: 0px;
+                left: 50%;
+                margin-left: -5px;
+                content: " ";
+            }
+
+            &:before{
+                height: 2px;
+                width: 100%;
+                content: " ";
+                position: absolute;
+                top: 6px;
+                left: 50%;
+                background-color: #dee2e8;
+                min-width: 127px;
+            }
+
+            &:last-child{
+                &:before{
+                    display: none;
+                }
+            }
+        }
+    }
     h2{
         font-size: 18px;
         font-weight: 700;
@@ -92,6 +156,22 @@
         }
     }
 
+    .ui-selectmenu-button.ui-button{
+        height: 50px;
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        &:focus, &:active{
+            outline: none;
+        }
+    }
+    .timediv{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
     &__go{
         margin-left: 15px;
         color: #8A8F9A;
@@ -118,13 +198,43 @@
     padding-right: 15px;
 }
 
+.img-delete{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    background: $green;
+    color: white;
+    cursor: pointer;
+}
+
 .fileButton{
     position: relative;
+    
     label{
         color: white;
         font-size: 16px;
         font-weight: 600;
         cursor: pointer;
+    }
+
+    &_img{
+        max-height: 183px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        max-width: 220px;
+        margin-bottom: 10px;
+        display: none;
+
+        img{
+            width: 100%;
+        }
     }
 
     input{

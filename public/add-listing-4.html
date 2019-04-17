@@ -164,51 +164,44 @@
         <div class="listing-steps">
             <a href="#!" class="step-past">Description</a>
             <a href="#!" class="step-past">Price</a>
-            <a href="#!" class="step-active">Images</a>
-            <a href="#!" class="step">Details</a>
+            <a href="#!" class="step-past">Images</a>
+            <a href="#!" class="step-active">Details</a>
             <a href="#!" class="step">Location</a>
             <a href="#!" class="step">Amenities</a>
             <a href="#!" class="step">Calendar</a>
         </div>
     </div>
     <form class="listing__wrapper">
-        <h2>Listing Media</h2>
+        <h2>Listing Details</h2>
         <div class="listing__attn">
             <span>These fields are mandatory: Main Category, Second Category, Listing Price</span>
         </div>
-        <div class="listing__row listing__col">
-                <div class="sortable listingPics">
-                    
-                </div>
-                <div class="timediv">
-                
-                    <div class="fileButton_img">
-                        <a class="img-delete">
-                            <i class="far fa-trash-alt"></i>
-                        </a>
-                        <img id="img" src="#" alt="your image" />
-                    </div>
-
-                    <div class="fileButton">
-                            <input type='file' id="imgInp" multiple />
-                        <label class="greenButton" for="imgInp" >Select Media</label>
-                    </div>
-                
+        <div class="listing__row">
+            <div class="listing__col cl3">
+                <h3>Listing Details</h3>
+            </div>
+            <div class="listing__col cl3">
+                <label for="pernight">Size in m2</label>
+                <input type="text" id="pernight">
+            </div>
+            <div class="listing__col cl3">
+                <label for="before">Rooms</label>
+                <input type="text" id="before">
             </div>
         </div>
         <div class="listing__row">
             <div class="listing__col cl3">
-                <label for="category">Video from</label>
-                <select name="types" class="select-menu" id="category"> 
-                    <option value="youtube" selected="selected">Youtube</option>
-                    <option value="vimeo">Vimeo</option>
-                </select>
             </div>
             <div class="listing__col cl3">
-                    <label for="video-url">Video ID:</label>
-                    <input type="text" id="video-url">
-                </div>
+                <label for="pernight">Bedrooms</label>
+                <input type="text" id="pernight">
+            </div>
+            <div class="listing__col cl3">
+                <label for="before">Bathrooms</label>
+                <input type="text" id="before">
+            </div>
         </div>
+        
        
        
         <div class="listing__row">
@@ -217,7 +210,7 @@
             </button>
         </div>
         <div class="listing__row">
-            <a href="#!" class="listing__go">Go to Details settings.</a>
+            <a href="#!" class="listing__go">Go to Location settings.</a>
         </div>
     </form>
 </section>
