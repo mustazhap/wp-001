@@ -342,7 +342,7 @@ if ($('#calendar2 thead tr:nth-child(1) td:nth-child(1)').length) {
 
         Calendar3("calendar3", document.querySelector('#calendar3 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar3 thead td:nth-child(2)').dataset.month) + 1);
     }
-
+}
 
 
 // Gallery on item single
