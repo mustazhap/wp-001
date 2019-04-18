@@ -27,6 +27,8 @@
   })
   
 
+  
+
   // tooltip
   $( document ).tooltip({
     position: {
