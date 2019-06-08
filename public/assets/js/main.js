@@ -26,6 +26,27 @@
 
   })
   
+  // swiper
+  var mySwiper = new Swiper ('.popular__swiper', {
+    // Optional parameters
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-bn',
+      prevEl: '.swiper-bp',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  })
 
   
 
@@ -44,6 +65,60 @@
       }
     }
   });
+
+
+  // show hide password
+  $(".shide").click(function() {
+    $(this).toggleClass("fa-eye fa-eye-slash");
+    var input = $($(this).attr("toggle"));
+    if (input.attr("type") == "password") {
+      input.attr("type", "text");
+    } else {
+      input.attr("type", "password");
+    }
+  });
+
+  // popup for login
+  $("#log").click(function(){
+      $("#reg").removeClass("a-active");
+      $(this).addClass("a-active");
+      $("#login").show();
+      $("#registration").hide();
+  })
+
+  $("#reg").click(function(){
+    $("#log").removeClass("a-active");
+    $(this).addClass("a-active");
+    $("#login").hide();
+    $("#registration").show();
+    })
+
+    // show hide pop
+    $(document).click(function(event) {
+        if (!$(event.target).closest(".enter_pop, #authn").length) {
+          $("body").find(".enter_pop").hide();
+        }
+      });
+      $("#authn").click(function(){
+        $(".enter_pop").show().css("display", "flex");
+    })
+
+
+    // search field
+    $(".nhero-search").focus(function() {
+        $('.nhero__ad').show('slow').css("display", "flex").done(
+            
+        );  
+        
+        //return false;
+    });
+
+    $( "#datepick" ).datepicker();
+    $( "#ntime" ).selectmenu();
+    $( "#nguests" ).selectmenu();
+    $(".selmenu").selectmenu();
+
+
 
   // Lang
   
@@ -144,33 +219,33 @@ $(".modal__inner").click(function(event){ //popup not hide on text
 // popup-end
 
 // autocomplete
-var availableTags = [
-    "ActionScript",
-    "AppleScript",
-    "Asp",
-    "BASIC",
-    "C",
-    "C++",
-    "Clojure",
-    "COBOL",
-    "ColdFusion",
-    "Erlang",
-    "Fortran",
-    "Groovy",
-    "Haskell",
-    "Java",
-    "JavaScript",
-    "Lisp",
-    "Perl",
-    "PHP",
-    "Python",
-    "Ruby",
-    "Scala",
-    "Scheme"
-  ];
-  $( "#search" ).autocomplete({
-    source: availableTags
-  });
+// var availableTags = [
+//     "ActionScript",
+//     "AppleScript",
+//     "Asp",
+//     "BASIC",
+//     "C",
+//     "C++",
+//     "Clojure",
+//     "COBOL",
+//     "ColdFusion",
+//     "Erlang",
+//     "Fortran",
+//     "Groovy",
+//     "Haskell",
+//     "Java",
+//     "JavaScript",
+//     "Lisp",
+//     "Perl",
+//     "PHP",
+//     "Python",
+//     "Ruby",
+//     "Scala",
+//     "Scheme"
+//   ];
+//   $( "#search" ).autocomplete({
+//     source: availableTags
+//   });
 
     $("#guests").selectmenu().addClass("overflow");
     $(".select-menu").selectmenu().addClass("overflow");
@@ -186,11 +261,14 @@ var availableTags = [
     $( ".datepicker" ).datepicker({
         dateFormat: 'yy-mm-dd',
         minDate: 0,
-        onSelect: function(dateText, inst){
-            var $this = $("this");
-            $this.next().datepicker("option","minDate",
-            $this.next().datepicker("getDate"));
-         },
+        // onSelect: function(dateText, inst){
+        //     var $this = $("this");
+        //     $this.parent().parent().find(".datepicker2").datepicker("option","minDate",
+        //     $this.parent().parent().find(".datepicker2").datepicker("getDate"));
+        //  },
+        onSelect: function( selectedDate ) {
+            $( ".datepicker2" ).datepicker( "option", "minDate", selectedDate );
+        },
          beforeShowDay: function(date) {
             var result = [true, '', null];
             var matching = $.grep(events, function(event) {
@@ -209,7 +287,10 @@ var availableTags = [
     $( ".datepicker2" ).datepicker(
         {
             dateFormat: 'yy-mm-dd',
-            minDate: 0
+            minDate: 0,
+            onSelect: function( selectedDate ) {
+                $( ".datepicker" ).datepicker( "option", "maxDate", selectedDate );
+            }
         }
     );
 

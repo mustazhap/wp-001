@@ -16,6 +16,28 @@
       font-size: 28px;
       text-align: center;
     }
+
+    &__h2{
+      font-size: 24px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      color: #31394c;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    &__p{
+      font-size: 16px;
+      width: 70%;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.38;
+      letter-spacing: normal;
+      text-align: center;
+      color: #808080;
+    }
   }
   
 

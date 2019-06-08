@@ -1,6 +1,69 @@
 // Footer
 .footer{
+    background: #fafafa;
     &__wrapper{
-        
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__top{
+        display: flex;
+    }
+    &__block{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__r{
+        display: flex;
+    }
+
+    &__lang{
+        width: 110px;
+        margin-right: 10px;
+    }
+
+    &__money{
+        width: 132px;
+    }
+
+    &__bottom{
+        display: flex;
+    }
+}
+
+.ninput_wp .nhero-input {
+    border: none;
+    width: 100%;
+    text-indent: 42px;
+    height: 57px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 3px 3px 10px 0 rgba(0,0,0,.1);
+    box-shadow: 3px 3px 10px 0 rgba(0,0,0,.1);
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    color: #31394c;
+}
+
+.ninput_wp .ui-selectmenu-button{
+    height: 40px;
+    display: flex;
+    width: 100%;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    background: #fff;
+    outline: 0;
+    border: solid 1px #e6e6e6;
+}
+
+.ninput_wp{
+    .ui-selectmenu-icon.ui-icon{
+        display: none;
     }
 }

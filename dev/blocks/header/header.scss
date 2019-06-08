@@ -464,3 +464,23 @@
     }
 }
 // Header
+
+//nheader
+.ep__check .checkmark:after{
+    left: 1px;
+}
+
+.enter_pop{
+    z-index: 9999;
+}
+
+.ep__us{
+    font-weight: 500;
+    color: #5a51de;
+    text-decoration: underline;
+
+    a{
+        color: #5a51de;
+
+    }
+}
