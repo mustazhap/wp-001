@@ -484,3 +484,52 @@
 
     }
 }
+
+.white-header{
+    position: relative;
+    height: 80px;
+    .nheader__nav{
+        a{
+            color: $mainText;
+            font-weight: 500;
+
+        }
+    }
+
+    .nactive{
+        color: $mainColor !important;
+        font-weight: 600;
+        position: relative;
+
+        
+    }
+
+    .header__logo{
+        img{
+            height: 40px;
+
+        }
+    }
+
+    .nbutton_white{
+        color: $mainColor;
+        border-color: $mainColor;
+
+    }
+}
+
+.nactive{
+    &:after{
+        content: '';
+        height: 1px;
+        width: 100%;
+        background: $mainColor;
+        position: absolute;
+        top: -33px;
+        left: 0;
+    }
+}
+
+.enter_pop{
+    top: 62px;
+}

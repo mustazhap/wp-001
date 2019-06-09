@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/old.css">
+	<link rel="stylesheet" href="assets/libs/swiper/css/swiper.min.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="assets/libs/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+
+
+	<title>Site Title: Index</title>
+
+</head>
+<body>
+
+<header class="nheader section white-header">
+    <div class="nheader__wrapper section__wrapper">
+        <div class="nheader__left">
+            <a href="/" class="header__logo"><img src="assets/img/logo.svg" alt="Logo"></a>
+            <nav class="nheader__nav">
+                <a class="nactive" href="#!">Конференц-залы</a>
+                <a href="#!">Хостелы</a>
+                <a href="#!">О сервисе</a>
+                <a href="#!">Оплата</a>
+            </nav>
+        </div>
+        <div class="nheader__right">
+            <i class="far fa-bars nmob-menu"></i>
+            <a href="#!" id="authn" class="nbutton nbutton_main">
+                    <i class="far fa-user-circle"></i>
+                Войти
+                <i class="far fa-angle-down"></i>
+            </a>
+            <a href="#!" class="nbutton nbutton_white"> <i class="far fa-plus-circle"></i> Добавить зал</a>
+
+            <div class="enter_pop">
+                <div class="ep-triangle"></div>
+                <div class="ep__top">
+                    <a href="#!" class="a-active" id="log">Войти</a>
+                    <a href="#!" id="reg">Регистрация</a>
+                </div>
+                <div class="ep__body" id="login">
+                    <div class="ninput_wp">
+                        <input type="email" class="ninput" placeholder="Электронная почта">
+                        <i class="far fa-envelope"></i>
+                    </div>
+                    <div class="ninput_wp">
+                        <input id="shide" type="password" class="ninput" placeholder="Пароль">
+                        <i class="far fa-lock-alt"></i>
+                        <i class="far fa-eye shide" toggle="#shide"></i>
+                    </div>
+                    <label class="ep__check">
+                        Запомнить меня
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <button class="nbutton nbutton_main">Войти</button>
+                    <a href="#!" class="ep__link">Забыли пароль?</a>
+                </div>
+                <div class="ep__body" id="registration">
+                        <div class="ninput_wp">
+                            <input type="email" class="ninput" placeholder="Электронная почта">
+                            <i class="far fa-envelope"></i>
+                        </div>
+                        <div class="ninput_wp">
+                            <input type="password" class="ninput" placeholder="Пароль">
+                            <i class="far fa-lock-alt"></i>
+                        </div>
+                        <div class="ninput_wp">
+                            <input type="password" class="ninput" placeholder="Повторите пароль">
+                            <i class="far fa-lock-alt"></i>
+                        </div>
+                        <label class="ep__check ep__us">
+                            Я согласен(-на) с <a href="#!">условиями</a> 
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <button class="nbutton nbutton_main">Зарегистрироваться</button>
+                    </div>
+                <div class="ep__down">
+                    <div class="ep__right">
+                        <span>Войти через:</span>
+                        <a href="#!"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#!"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#!"><i class="fab fa-vk"></i></a>
+                    </div>
+                    <div class="ep__left">
+                        <a href="#!"><i class="fas fa-qrcode"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="nresult section">
+    <div class="section__wrapper nresult__wrapper">
+        
+    </div>
+</section>
+
+
+
+
+
+<!-- Footer -->
+<footer class="section footer">
+    <div class="section__wrapper footer__wrapper">
+        <div class="footer__top">
+      
+            <div class="footer__block">
+                <a href="#!" class="footer__logo"><img src="assets/img/logo.svg" alt=""></a>
+                <div class="footer__r">
+                    <div class="ninput_wp nhero__main footer__lang">
+                        <select name="time" class="selmenu" placeholder="Время начала">
+                                <option><img src="assets/img/svg/ru.svg" alt=""> RU</option>
+                                <option><img src="assets/img/svg/kz.svg" alt=""> KZ</option>
+                                <option><img src="assets/img/svg/en.svg" alt=""> EN</option>
+                        </select>
+                        <i class="far fa-angle-down"></i>
+                    </div>
+                    <div class="ninput_wp nhero__main footer__money">
+                        <select name="time" class="selmenu" placeholder="Время начала">
+                                <option>KZT (Тенге)</option>
+                                <option>KZT (Тенге)</option>
+                                <option>KZT (Тенге)</option>
+                        </select>
+                        <i class="far fa-angle-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__block">
+                <h4 class="footer__title">Разделы</h3>
+                <a href="#!">Главная</a>
+                <a href="#!">О сервисе</a>
+                <a href="#!">Партнерам</a>
+                <a href="#!">Владельцам</a>
+                <a href="#!">Оплата</a>
+
+            </div>
+            <div class="footer__block">
+                <h4 class="footer__title">Сервисы</h3>
+                <a href="#!">Хостелы</a>
+                <a href="#!">Коворкинги</a>
+                <a href="#!">Конференц залы</a>
+                <a href="#!">Апартаменты</a>
+                <a href="#!">Ивенты</a>
+            </div>
+            <div class="footer__block">
+                <h4 class="footer__title">Страны</h3>
+                <a href="#!">Казахстан</a>
+                <a href="#!">Россия</a>
+                <a href="#!">Кыргызстан</a>
+                <a href="#!">Узбекистан</a>
+                <a href="#!">Беларусь</a>
+            </div>
+            <div class="footer__block">
+                <h4 class="footer__title">Подписка на новости</h3>
+                <div class="footer__mail">
+                    <input type="text" class="ninput" placeholder="Электронная почта">
+                    <button class="nbutton">Отправить</button>
+                </div>
+                <h4 class="footer__title">Социальные сети</h3>
+                <div class="footer__soc">
+                    <a href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#!"><i class="fab fa-instagram"></i></a>
+                    <a href="#!"><i class="fab fa-twitter"></i></a>
+                    <a href="#!"><i class="fab fa-vk"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__copyright">
+                <span>© 2017 - 2019 Flow System   |   Все права защищены.</span>
+            </div>
+            <div class="footer__shortlinks">
+                <span>
+                    <a href="#!">Политика конфиденциальности</a>   |   <a href="#!">Правила использования</a>    |   <a href="#!">Публичная офферта</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer End -->
+
+<script type="text/javascript" src="assets/libs/swiper/js/swiper.min.js"></script>
+
+
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+
+
+
+
+</body>
+</html>

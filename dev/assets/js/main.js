@@ -25,7 +25,19 @@
     $('.fileButton_img').hide();
 
   })
-  
+
+  $('.popular__swiper').hover(
+    function () {
+      $(this).find(".swiper-bp").css("opacity", "1");
+      $(this).find(".swiper-bn").css("opacity", "1");
+      $(this).find(".swiper-pagination").css("opacity", "1");
+    }, 
+    function () {
+      $(this).find(".swiper-bp").css("opacity", "0");
+      $(this).find(".swiper-bn").css("opacity", "0");
+      $(this).find(".swiper-pagination").css("opacity", "0");
+    }
+  );
   // swiper
   var mySwiper = new Swiper ('.popular__swiper', {
     // Optional parameters
@@ -106,7 +118,7 @@
 
     // search field
     $(".nhero-search").focus(function() {
-        $('.nhero__ad').show('slow').css("display", "flex").done(
+        $('.nhero__ad').fadeIn().css("display", "flex").done(
             
         );  
         

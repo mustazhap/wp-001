@@ -60,8 +60,11 @@
         width: 40px;
         height: 40px;
         background: rgba(black, 0.5);
+        transition: all ease 0.5s;
         &:hover{
             text-decoration: none;
+            background: rgba(black, 1);
+
         }
     }
 
@@ -144,7 +147,10 @@
         border-radius: 3px;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
-
+        .swiper-bp, .swiper-bn, .swiper-pagination{
+            opacity: 0;
+        }
+       
     }
 
     .swiper-pagination-bullet{
