@@ -17,7 +17,7 @@
 <body>
 
 <header class="nheader section white-header">
-    <div class="nheader__wrapper section__wrapper">
+    <div class="nheader__wrapper section__wrapper section__wrapper_full">
         <div class="nheader__left">
             <a href="/" class="header__logo"><img src="assets/img/logo.svg" alt="Logo"></a>
             <nav class="nheader__nav">
@@ -98,7 +98,814 @@
 
 <section class="nresult section">
     <div class="section__wrapper nresult__wrapper">
+	    <div class="breadcrumbs">
+    <span>
+        <a href="#!">Главная</a> / <a href="#!">Ссылка 1</a> /  <a href="#!"> Ссылка 2</a>
+    </span>
+</div>
         
+        <h2 class="section__h2">
+            Поиск конференц залов
+        </h2>
+
+        <div class="nresult__search">
+            <div class="ninput_wp nhero__main select_city">
+            <i class="far fa-map-marker-alt"></i>
+            <select name="ncity" id="ncity" class="selmenu nhero-search">
+                    <option selected>Астана</option>
+                    <option>Алматы</option>
+                    <option>Атырау</option>
+                    <option>Актау</option>
+                    <option>Кызылорда</option>
+                    <option>Караганда</option>
+                    <option>Шымкент</option>
+            </select>
+            <i class="far fa-angle-down"></i>
+
+        </div>
+                <div class="ninput_wp nhero__main select_date">
+                    <i class="far fa-calendar-alt"></i>
+                        <input autocomplete="off" class="nhero-input" type="text" placeholder="Дата мероприятия" id="datepick">
+                    <i class="far fa-angle-down"></i>
+                </div>
+                <div class="ninput_wp nhero__main select_time">
+                    <i class="far fa-clock"></i>
+                    <select name="time" id="ntime" placeholder="Время начала">
+                            <option selected>10:00</option>
+                            <option>11:00</option>
+                            <option>12:00</option>
+                            <option>13:00</option>
+                            <option>14:00</option>
+                            <option>15:00</option>
+                            <option>16:00</option>
+                            <option>17:00</option>
+                            <option>18:00</option>
+                            <option>19:00</option>
+                            <option>20:00</option>
+                            <option>21:00</option>
+                            <option>22:00</option>
+                            <option>23:00</option>
+                            <option>24:00</option>
+                            <option>01:00</option>
+                            <option>02:00</option>
+                    </select>
+                    <i class="far fa-angle-down"></i>
+                </div>
+                <div class="ninput_wp nhero__main select_time">
+                    <i class="far fa-clock"></i>
+                    <select name="time2" id="ntime2">
+                            <option>10:00</option>
+                            <option>11:00</option>
+                            <option>12:00</option>
+                            <option>13:00</option>
+                            <option selected>14:00</option>
+                            <option>15:00</option>
+                            <option>16:00</option>
+                            <option>17:00</option>
+                            <option>18:00</option>
+                            <option>19:00</option>
+                            <option>20:00</option>
+                            <option>21:00</option>
+                            <option>22:00</option>
+                            <option>23:00</option>
+                            <option>24:00</option>
+                            <option>01:00</option>
+                            <option>02:00</option>
+                    </select>
+                    <i class="far fa-angle-down"></i>
+                </div>
+                <div class="ninput_wp nhero__main nhero__short">
+                    <i class="far fa-user-friends"></i>
+                    <select name="guests" id="nguests" >
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option selected>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                    </select>
+                    <i class="far fa-angle-down"></i>
+                </div>
+        <button class="nbutton nbutton_main nhero__button">Найти</button>
+                
+
+        </div>
+        <div class="nresult__row">
+	        <div class="filter">
+    <div class="filter__block filter__block_main">
+        <span class="filter__title">Фильтр</span>
+    </div>
+    <div class="filter__block">
+        <span class="filter__title">Стоимость</span>
+        <div id="slider-range"></div>
+        <p>
+            <input type="text" id="amount" readonly style="border:0; color:#31394c; font-weight:600;">
+        </p>
+    </div>
+
+    <div class="filter__block filter__block_n">
+            <span class="filter__title">Показывать цену</span>
+            <label class="nraio">
+                <input type="radio" checked="checked" name="radio-price">
+                <span class="span">За день</span>
+                <span class="checkmark"></span>
+            </label>
+            <label class="nraio">
+                <input type="radio" name="radio-price">
+                <span class="span">За день</span>
+                <span class="checkmark"></span>
+            </label>
+            <label class="nraio">
+                <input type="radio" name="radio-price">
+                <span class="span">За день</span>
+                <span class="checkmark"></span>
+            </label>
+    </div>
+
+    <div class="filter__block filter__block_n">
+            <span class="filter__title">Цель брони</span>
+            <label class="nraio">
+                <input type="radio" name="radio-goal">
+                <span class="span">Для тренингов</span>
+                <span class="checkmark"></span>
+            </label>
+            <label class="nraio">
+                <input type="radio" name="radio-goal">
+                <span class="span">Для мероприятий</span>
+                <span class="checkmark"></span>
+            </label>
+            <label class="nraio">
+                <input type="radio" name="radio-goal">
+                <span class="span">Для встреч</span>
+                <span class="checkmark"></span>
+            </label>
+    </div>
+    <div class="filter__block filter__block_n">
+            <span class="filter__title">Рассадка</span>
+            <label class="nraio">
+                <input type="radio" name="radio-seats">
+                <span class="span">Театр</span>
+                <span class="checkmark"></span>
+            </label>
+            <label class="nraio">
+                <input type="radio" name="radio-seats">
+                <span class="span">Класс</span>
+                <span class="checkmark"></span>
+            </label>
+            <label class="nraio">
+                <input type="radio" name="radio-seats">
+                <span class="span">Совещание</span>
+                <span class="checkmark"></span>
+            </label>
+            <label class="nraio">
+                <input type="radio" name="radio-seats">
+                <span class="span">Банкет</span>
+                <span class="checkmark"></span>
+            </label>
+            <label class="nraio">
+                <input type="radio" name="radio-seats">
+                <span class="span">U-стиль</span>
+                <span class="checkmark"></span>
+            </label>
+            <label class="nraio">
+                <input type="radio" name="radio-seats">
+                <span class="span">Т-стиль</span>
+                <span class="checkmark"></span>
+            </label>
+            <label class="nraio">
+                <input type="radio" name="radio-seats">
+                <span class="span">Коктейль</span>
+                <span class="checkmark"></span>
+            </label>
+    </div>
+
+    <div class="filter__block filter__block_n">
+            <span class="filter__title">Оснащение</span>
+            <label class="ep__check">
+                <input type="checkbox">
+                <span class="span">Wi-Fi</span>
+                <span class="checkmark"></span>
+            </label>
+            <label class="ep__check">
+                <input type="checkbox">
+                <span class="span">Проектор</span>
+                <span class="checkmark"></span>
+            </label>
+            <label class="ep__check">
+                <input type="checkbox">
+                <span class="span">Большой экран</span>
+                <span class="checkmark"></span>
+            </label>
+            <label class="ep__check">
+                <input type="checkbox">
+                <span class="span">Мониторные колонки</span>
+                <span class="checkmark"></span>
+            </label>
+            <label class="ep__check">
+                <input type="checkbox">
+                <span class="span">Система синхронного
+                        перевода</span>
+                <span class="checkmark"></span>
+            </label>
+            <label class="ep__check">
+                <input type="checkbox">
+                <span class="span">Система аудиозаписи</span>
+                <span class="checkmark"></span>
+            </label>
+            <label class="ep__check">
+                <input type="checkbox">
+                <span class="span">Настольные микрофоны</span>
+                <span class="checkmark"></span>
+            </label>
+            <label class="ep__check">
+                <input type="checkbox">
+                <span class="span">Трибуна</span>
+                <span class="checkmark"></span>
+            </label>
+            <label class="ep__check">
+                <input type="checkbox">
+                <span class="span">Флипчарт</span>
+                <span class="checkmark"></span>
+            </label>
+    </div>
+
+    <div class="filter__block filter__block_n">
+            <span class="filter__title">Дополнительно</span>
+            <label class="ep__check">
+                <input type="checkbox">
+                <span class="span">Вода</span>
+                <span class="checkmark"></span>
+            </label>
+            <label class="ep__check">
+                <input type="checkbox">
+                <span class="span">Кофе-брейк</span>
+                <span class="checkmark"></span>
+            </label>
+            <label class="ep__check">
+                <input type="checkbox">
+                <span class="span">Ланч</span>
+                <span class="checkmark"></span>
+            </label>
+            <label class="ep__check">
+                <input type="checkbox">
+                <span class="span">Ужин</span>
+                <span class="checkmark"></span>
+            </label>
+    </div>
+</div>
+            <div class="nresult__block">
+                <h3 class="nresult__title">Алматы: 365 концферен-залов найдено</h3>
+                <div class="nresult__top">
+                    <div class="nresult__filter">
+                        <a href="#!" class="factive">Сначала дешевые</a>
+                        <a href="#!">Сначала дорогие</a>
+                        <a href="#!">Все конференц залы</a>
+                        <a href="#!">Только отели</a>
+                    </div>
+                    <a href="#!" class="nbutton nbutton_white nresult__map">
+                            <i class="far fa-map-marker-alt"></i>
+                            Посмотреть на карте
+                    </a>
+                </div>
+                <div class="nresult__items">
+                    <div class="popular__block">
+    <div class="popular__slider">
+        <div class="popular__top">
+            <div class="popular__sale">-20%</div>
+            <a href="#!" class="popular__fav"><i class="fas fa-heart"></i></a>
+        </div>
+        <div class="swiper-container popular__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-bp"><i class="far fa-arrow-left"></i></div>
+            <div class="swiper-bn"><i class="far fa-arrow-right"></i></div>
+        
+        </div>
+    </div>
+    <div class="popular__body">
+        <a href="#!" class="popular__title">Галерея</a>
+        <a href="#!" class="popular__city">Казахстан / Алматы</a>
+        <div class="popular__r">
+            <div class="popular__users">
+                <i class="far fa-users"></i>
+                до 100 мест
+            </div>
+            <div class="popular__rank">
+                <i class="far fa-star"></i>
+                4.5
+            </div>
+        </div>
+    </div>
+    <div class="popular__footer">
+        <span class="popular__price">
+            30 000 ₸ / <b>день</b>   
+        </span>
+    </div>
+</div>
+	                <div class="popular__block">
+    <div class="popular__slider">
+        <div class="popular__top">
+            <div class="popular__sale">-20%</div>
+            <a href="#!" class="popular__fav"><i class="fas fa-heart"></i></a>
+        </div>
+        <div class="swiper-container popular__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-bp"><i class="far fa-arrow-left"></i></div>
+            <div class="swiper-bn"><i class="far fa-arrow-right"></i></div>
+        
+        </div>
+    </div>
+    <div class="popular__body">
+        <a href="#!" class="popular__title">Галерея</a>
+        <a href="#!" class="popular__city">Казахстан / Алматы</a>
+        <div class="popular__r">
+            <div class="popular__users">
+                <i class="far fa-users"></i>
+                до 100 мест
+            </div>
+            <div class="popular__rank">
+                <i class="far fa-star"></i>
+                4.5
+            </div>
+        </div>
+    </div>
+    <div class="popular__footer">
+        <span class="popular__price">
+            30 000 ₸ / <b>день</b>   
+        </span>
+    </div>
+</div>
+	                <div class="popular__block">
+    <div class="popular__slider">
+        <div class="popular__top">
+            <div class="popular__sale">-20%</div>
+            <a href="#!" class="popular__fav"><i class="fas fa-heart"></i></a>
+        </div>
+        <div class="swiper-container popular__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-bp"><i class="far fa-arrow-left"></i></div>
+            <div class="swiper-bn"><i class="far fa-arrow-right"></i></div>
+        
+        </div>
+    </div>
+    <div class="popular__body">
+        <a href="#!" class="popular__title">Галерея</a>
+        <a href="#!" class="popular__city">Казахстан / Алматы</a>
+        <div class="popular__r">
+            <div class="popular__users">
+                <i class="far fa-users"></i>
+                до 100 мест
+            </div>
+            <div class="popular__rank">
+                <i class="far fa-star"></i>
+                4.5
+            </div>
+        </div>
+    </div>
+    <div class="popular__footer">
+        <span class="popular__price">
+            30 000 ₸ / <b>день</b>   
+        </span>
+    </div>
+</div>
+	                <div class="popular__block">
+    <div class="popular__slider">
+        <div class="popular__top">
+            <div class="popular__sale">-20%</div>
+            <a href="#!" class="popular__fav"><i class="fas fa-heart"></i></a>
+        </div>
+        <div class="swiper-container popular__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-bp"><i class="far fa-arrow-left"></i></div>
+            <div class="swiper-bn"><i class="far fa-arrow-right"></i></div>
+        
+        </div>
+    </div>
+    <div class="popular__body">
+        <a href="#!" class="popular__title">Галерея</a>
+        <a href="#!" class="popular__city">Казахстан / Алматы</a>
+        <div class="popular__r">
+            <div class="popular__users">
+                <i class="far fa-users"></i>
+                до 100 мест
+            </div>
+            <div class="popular__rank">
+                <i class="far fa-star"></i>
+                4.5
+            </div>
+        </div>
+    </div>
+    <div class="popular__footer">
+        <span class="popular__price">
+            30 000 ₸ / <b>день</b>   
+        </span>
+    </div>
+</div>
+	                <div class="popular__block">
+    <div class="popular__slider">
+        <div class="popular__top">
+            <div class="popular__sale">-20%</div>
+            <a href="#!" class="popular__fav"><i class="fas fa-heart"></i></a>
+        </div>
+        <div class="swiper-container popular__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-bp"><i class="far fa-arrow-left"></i></div>
+            <div class="swiper-bn"><i class="far fa-arrow-right"></i></div>
+        
+        </div>
+    </div>
+    <div class="popular__body">
+        <a href="#!" class="popular__title">Галерея</a>
+        <a href="#!" class="popular__city">Казахстан / Алматы</a>
+        <div class="popular__r">
+            <div class="popular__users">
+                <i class="far fa-users"></i>
+                до 100 мест
+            </div>
+            <div class="popular__rank">
+                <i class="far fa-star"></i>
+                4.5
+            </div>
+        </div>
+    </div>
+    <div class="popular__footer">
+        <span class="popular__price">
+            30 000 ₸ / <b>день</b>   
+        </span>
+    </div>
+</div>
+	                <div class="popular__block">
+    <div class="popular__slider">
+        <div class="popular__top">
+            <div class="popular__sale">-20%</div>
+            <a href="#!" class="popular__fav"><i class="fas fa-heart"></i></a>
+        </div>
+        <div class="swiper-container popular__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-bp"><i class="far fa-arrow-left"></i></div>
+            <div class="swiper-bn"><i class="far fa-arrow-right"></i></div>
+        
+        </div>
+    </div>
+    <div class="popular__body">
+        <a href="#!" class="popular__title">Галерея</a>
+        <a href="#!" class="popular__city">Казахстан / Алматы</a>
+        <div class="popular__r">
+            <div class="popular__users">
+                <i class="far fa-users"></i>
+                до 100 мест
+            </div>
+            <div class="popular__rank">
+                <i class="far fa-star"></i>
+                4.5
+            </div>
+        </div>
+    </div>
+    <div class="popular__footer">
+        <span class="popular__price">
+            30 000 ₸ / <b>день</b>   
+        </span>
+    </div>
+</div>
+	                <div class="popular__block">
+    <div class="popular__slider">
+        <div class="popular__top">
+            <div class="popular__sale">-20%</div>
+            <a href="#!" class="popular__fav"><i class="fas fa-heart"></i></a>
+        </div>
+        <div class="swiper-container popular__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-bp"><i class="far fa-arrow-left"></i></div>
+            <div class="swiper-bn"><i class="far fa-arrow-right"></i></div>
+        
+        </div>
+    </div>
+    <div class="popular__body">
+        <a href="#!" class="popular__title">Галерея</a>
+        <a href="#!" class="popular__city">Казахстан / Алматы</a>
+        <div class="popular__r">
+            <div class="popular__users">
+                <i class="far fa-users"></i>
+                до 100 мест
+            </div>
+            <div class="popular__rank">
+                <i class="far fa-star"></i>
+                4.5
+            </div>
+        </div>
+    </div>
+    <div class="popular__footer">
+        <span class="popular__price">
+            30 000 ₸ / <b>день</b>   
+        </span>
+    </div>
+</div>
+	                <div class="popular__block">
+    <div class="popular__slider">
+        <div class="popular__top">
+            <div class="popular__sale">-20%</div>
+            <a href="#!" class="popular__fav"><i class="fas fa-heart"></i></a>
+        </div>
+        <div class="swiper-container popular__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-bp"><i class="far fa-arrow-left"></i></div>
+            <div class="swiper-bn"><i class="far fa-arrow-right"></i></div>
+        
+        </div>
+    </div>
+    <div class="popular__body">
+        <a href="#!" class="popular__title">Галерея</a>
+        <a href="#!" class="popular__city">Казахстан / Алматы</a>
+        <div class="popular__r">
+            <div class="popular__users">
+                <i class="far fa-users"></i>
+                до 100 мест
+            </div>
+            <div class="popular__rank">
+                <i class="far fa-star"></i>
+                4.5
+            </div>
+        </div>
+    </div>
+    <div class="popular__footer">
+        <span class="popular__price">
+            30 000 ₸ / <b>день</b>   
+        </span>
+    </div>
+</div>
+	                <div class="popular__block">
+    <div class="popular__slider">
+        <div class="popular__top">
+            <div class="popular__sale">-20%</div>
+            <a href="#!" class="popular__fav"><i class="fas fa-heart"></i></a>
+        </div>
+        <div class="swiper-container popular__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-bp"><i class="far fa-arrow-left"></i></div>
+            <div class="swiper-bn"><i class="far fa-arrow-right"></i></div>
+        
+        </div>
+    </div>
+    <div class="popular__body">
+        <a href="#!" class="popular__title">Галерея</a>
+        <a href="#!" class="popular__city">Казахстан / Алматы</a>
+        <div class="popular__r">
+            <div class="popular__users">
+                <i class="far fa-users"></i>
+                до 100 мест
+            </div>
+            <div class="popular__rank">
+                <i class="far fa-star"></i>
+                4.5
+            </div>
+        </div>
+    </div>
+    <div class="popular__footer">
+        <span class="popular__price">
+            30 000 ₸ / <b>день</b>   
+        </span>
+    </div>
+</div>
+                    <div class="popular__block">
+    <div class="popular__slider">
+        <div class="popular__top">
+            <div class="popular__sale">-20%</div>
+            <a href="#!" class="popular__fav"><i class="fas fa-heart"></i></a>
+        </div>
+        <div class="swiper-container popular__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-bp"><i class="far fa-arrow-left"></i></div>
+            <div class="swiper-bn"><i class="far fa-arrow-right"></i></div>
+        
+        </div>
+    </div>
+    <div class="popular__body">
+        <a href="#!" class="popular__title">Галерея</a>
+        <a href="#!" class="popular__city">Казахстан / Алматы</a>
+        <div class="popular__r">
+            <div class="popular__users">
+                <i class="far fa-users"></i>
+                до 100 мест
+            </div>
+            <div class="popular__rank">
+                <i class="far fa-star"></i>
+                4.5
+            </div>
+        </div>
+    </div>
+    <div class="popular__footer">
+        <span class="popular__price">
+            30 000 ₸ / <b>день</b>   
+        </span>
+    </div>
+</div> 
+	                <div class="popular__block">
+    <div class="popular__slider">
+        <div class="popular__top">
+            <div class="popular__sale">-20%</div>
+            <a href="#!" class="popular__fav"><i class="fas fa-heart"></i></a>
+        </div>
+        <div class="swiper-container popular__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-bp"><i class="far fa-arrow-left"></i></div>
+            <div class="swiper-bn"><i class="far fa-arrow-right"></i></div>
+        
+        </div>
+    </div>
+    <div class="popular__body">
+        <a href="#!" class="popular__title">Галерея</a>
+        <a href="#!" class="popular__city">Казахстан / Алматы</a>
+        <div class="popular__r">
+            <div class="popular__users">
+                <i class="far fa-users"></i>
+                до 100 мест
+            </div>
+            <div class="popular__rank">
+                <i class="far fa-star"></i>
+                4.5
+            </div>
+        </div>
+    </div>
+    <div class="popular__footer">
+        <span class="popular__price">
+            30 000 ₸ / <b>день</b>   
+        </span>
+    </div>
+</div>                    
+	                <div class="popular__block">
+    <div class="popular__slider">
+        <div class="popular__top">
+            <div class="popular__sale">-20%</div>
+            <a href="#!" class="popular__fav"><i class="fas fa-heart"></i></a>
+        </div>
+        <div class="swiper-container popular__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-bp"><i class="far fa-arrow-left"></i></div>
+            <div class="swiper-bn"><i class="far fa-arrow-right"></i></div>
+        
+        </div>
+    </div>
+    <div class="popular__body">
+        <a href="#!" class="popular__title">Галерея</a>
+        <a href="#!" class="popular__city">Казахстан / Алматы</a>
+        <div class="popular__r">
+            <div class="popular__users">
+                <i class="far fa-users"></i>
+                до 100 мест
+            </div>
+            <div class="popular__rank">
+                <i class="far fa-star"></i>
+                4.5
+            </div>
+        </div>
+    </div>
+    <div class="popular__footer">
+        <span class="popular__price">
+            30 000 ₸ / <b>день</b>   
+        </span>
+    </div>
+</div>                    
+                                       
+
+                </div>
+                <div class="pagination">
+                    <a href="#!" class="pactive">1</a>
+                    <a href="#!">2</a>
+                    <a href="#!">3</a>
+                    <a href="#!">4</a>
+                    <a href="#!">5</a>
+                    <a href="#!"><i class="far fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -115,15 +922,15 @@
                 <a href="#!" class="footer__logo"><img src="assets/img/logo.svg" alt=""></a>
                 <div class="footer__r">
                     <div class="ninput_wp nhero__main footer__lang">
-                        <select name="time" class="selmenu" placeholder="Время начала">
-                                <option><img src="assets/img/svg/ru.svg" alt=""> RU</option>
-                                <option><img src="assets/img/svg/kz.svg" alt=""> KZ</option>
-                                <option><img src="assets/img/svg/en.svg" alt=""> EN</option>
+                        <select name="lang" id="nlang" class="TFOlstFiltreImg" placeholder="Время начала">
+                                <option data-style="background-image: url(&apos;assets/img/svg/ru.svg&apos;);">RU</option>
+                                <option data-style="background-image: url(&apos;assets/img/svg/kz.svg&apos;);">KZ</option>
+                                <option data-style="background-image: url(&apos;assets/img/svg/uk.svg&apos;);">EN</option>
                         </select>
                         <i class="far fa-angle-down"></i>
                     </div>
                     <div class="ninput_wp nhero__main footer__money">
-                        <select name="time" class="selmenu" placeholder="Время начала">
+                        <select name="val" class="selmenu" placeholder="Время начала">
                                 <option>KZT (Тенге)</option>
                                 <option>KZT (Тенге)</option>
                                 <option>KZT (Тенге)</option>

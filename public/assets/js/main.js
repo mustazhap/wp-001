@@ -25,7 +25,7 @@
     $('.fileButton_img').hide();
 
   })
-
+// show elements on hover
   $('.popular__swiper').hover(
     function () {
       $(this).find(".swiper-bp").css("opacity", "1");
@@ -54,10 +54,6 @@
       prevEl: '.swiper-bp',
     },
 
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
   })
 
   
@@ -105,6 +101,21 @@
     $("#registration").show();
     })
 
+    // slider range
+    $( "#slider-range" ).slider({
+        range: true,
+        min: 0,
+        max: 400000,
+        values: [ 99000, 250000 ],
+        slide: function( event, ui ) {
+          $( "#amount" ).val(ui.values[ 0 ] + "a - " + ui.values[ 1 ] + "a" );
+        }
+      });
+      $( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) +
+        "a  - " + $( "#slider-range" ).slider( "values", 1 ) + "a" );
+        
+
+
     // show hide pop
     $(document).click(function(event) {
         if (!$(event.target).closest(".enter_pop, #authn").length) {
@@ -115,21 +126,79 @@
         $(".enter_pop").show().css("display", "flex");
     })
 
+    // $.widget( "custom.iconselectmenu", $.ui.selectmenu, {
+    //     _renderItem: function( ul, item ) {
+    //       var li = $( "<li>" ),
+    //         wrapper = $( "<div>", { text: item.label } );
+   
+    //       if ( item.disabled ) {
+    //         li.addClass( "ui-state-disabled" );
+    //       }
+   
+    //       $( "<span>", {
+    //         style: item.element.attr( "data-style" ),
+    //         "class": "ui-icon " + item.element.attr( "data-class" )
+    //       })
+    //         .appendTo( wrapper );
+   
+    //       return li.append( wrapper ).appendTo( ul );
+    //     }
+    //   });
 
-    // search field
-    $(".nhero-search").focus(function() {
-        $('.nhero__ad').fadeIn().css("display", "flex").done(
-            
-        );  
-        
-        //return false;
+    $.widget("custom.TFOiconSelectImg", $.ui.selectmenu, {
+        _renderItem: function (ul, item) {
+            var li = $("<li>", { html: item.element.html() });
+            var attr = item.element.attr("data-style");
+            if (typeof attr !== typeof undefined && attr !== false) {
+                $("<span>", {
+                    style: item.element.attr("data-style"),
+                    "class": "ui-icon TFOOptlstFiltreImg"
+                }).appendTo(li);
+            }
+            return li.appendTo(ul);
+        }
     });
 
-    $( "#datepick" ).datepicker();
-    $( "#ntime" ).selectmenu();
-    $( "#nguests" ).selectmenu();
-    $(".selmenu").selectmenu();
+    $("#nlang")
+    .TFOiconSelectImg({
+        create: function (event, ui) {
+            var widget = $(this).TFOiconSelectImg("widget"); var $SpanTxt = widget.children(":last");
+            $span = $('<div class="TFOSizeImgSelected TFOOptlstFiltreImg"> </div>').appendTo($SpanTxt);
+            $span.attr("style", $(this).children(":first").data("style"));
+        },
+        change: function (event, ui) {
+            var widget = $(this).TFOiconSelectImg("widget"); var $SpanTxt = widget.children(":last");
+            $span = $('<div class="TFOSizeImgSelected TFOOptlstFiltreImg"> </div>').appendTo($SpanTxt);
+            $span.attr("style", ui.item.element.data("style"));
+            //$("#" + this.id + 'ImgSelected').attr("style", ui.item.element.data("style"));
+        }
+    }).TFOiconSelectImg("menuWidget").addClass("ui-menu-icons customicons");
+    // $('#nlang').selectmenu({
+    //     style:'popup', 
+    //     icons: [
+    //         {find: '.nru'},
+    //         {find: '.nkz'},
+    //         {find: '.nuk'}
+    //     ]
+    // });	
 
+			
+
+    $( "#datepick" ).datepicker();
+    $( "#ntime" ).selectmenu().selectmenu( "menuWidget" ).addClass( "overflow" );
+    $( "#ntime2" ).selectmenu().selectmenu( "menuWidget" ).addClass( "overflow" );
+    $( "#nguests" ).selectmenu().selectmenu( "menuWidget" ).addClass( "overflow" );
+    $(".selmenu").selectmenu({
+        icons: { button: "far fa-angle-down" }
+    });
+
+    // search field
+
+    $( ".nhero-search" ).selectmenu({
+        change: function( event, data ) {
+            $('.nhero__ad').fadeIn().css("display", "flex");
+        }
+       });
 
 
   // Lang
