@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="assets/css/old.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="assets/libs/swiper/css/swiper.min.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script src="assets/libs/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="assets/libs/pretty/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+
+	<title>Site Title: Index</title>
+
+</head>
+<body>
+
+<header class="nheader section white-header">
+    <div class="nheader__wrapper section__wrapper section__wrapper_full">
+        <div class="nheader__left">
+            <a href="/" class="header__logo"><img src="assets/img/logo.svg" alt="Logo"></a>
+            <nav class="nheader__nav">
+                <a class="nactive" href="#!">Конференц-залы</a>
+                <a href="#!">Хостелы</a>
+                <a href="#!">О сервисе</a>
+                <a href="#!">Оплата</a>
+            </nav>
+        </div>
+        <div class="nheader__right">
+            <i class="far fa-bars nmob-menu"></i>
+            <a href="#!" id="authn" class="nbutton nbutton_main">
+                    <i class="far fa-user-circle"></i>
+                Войти
+                <i class="far fa-angle-down"></i>
+            </a>
+            <a href="#!" class="nbutton nbutton_white"> <i class="far fa-plus-circle"></i> Добавить зал</a>
+
+            <div class="enter_pop">
+                <div class="ep-triangle"></div>
+                <div class="ep__top">
+                    <a href="#!" class="a-active" id="log">Войти</a>
+                    <a href="#!" id="reg">Регистрация</a>
+                </div>
+                <div class="ep__body" id="login">
+                    <div class="ninput_wp">
+                        <input type="email" class="ninput" placeholder="Электронная почта">
+                        <i class="far fa-envelope"></i>
+                    </div>
+                    <div class="ninput_wp">
+                        <input id="shide" type="password" class="ninput" placeholder="Пароль">
+                        <i class="far fa-lock-alt"></i>
+                        <i class="far fa-eye shide" toggle="#shide"></i>
+                    </div>
+                    <label class="ep__check">
+                        Запомнить меня
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <button class="nbutton nbutton_main">Войти</button>
+                    <a href="#!" class="ep__link">Забыли пароль?</a>
+                </div>
+                <div class="ep__body" id="registration">
+                        <div class="ninput_wp">
+                            <input type="email" class="ninput" placeholder="Электронная почта">
+                            <i class="far fa-envelope"></i>
+                        </div>
+                        <div class="ninput_wp">
+                            <input type="password" class="ninput" placeholder="Пароль">
+                            <i class="far fa-lock-alt"></i>
+                        </div>
+                        <div class="ninput_wp">
+                            <input type="password" class="ninput" placeholder="Повторите пароль">
+                            <i class="far fa-lock-alt"></i>
+                        </div>
+                        <label class="ep__check ep__us">
+                            Я согласен(-на) с <a href="#!">условиями</a> 
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <button class="nbutton nbutton_main">Зарегистрироваться</button>
+                    </div>
+                <div class="ep__down">
+                    <div class="ep__right">
+                        <span>Войти через:</span>
+                        <a href="#!"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#!"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#!"><i class="fab fa-vk"></i></a>
+                    </div>
+                    <div class="ep__left">
+                        <a href="#!"><i class="fas fa-qrcode"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="full section">
+    <div class="full__wrapper section__wrapper">
+        <div class="breadcrumbs">
+    <span>
+        <a href="#!">Главная</a> / <a href="#!">Ссылка 1</a> /  <a href="#!"> Ссылка 2</a>
+    </span>
+</div>
+    
+        <h2 class="section__h2">
+            Поиск конференц залов
+            <div class="rating-holder">
+                <div class="c-rating c-rating--big" data-rating-value="5">
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                </div>
+            </div>
+        </h2>
+        <span class="full__subt">
+            БЦ “Нурлы-тау”, г. Алматы, пр. аль-Фараби 5A
+        </span>
+        <div class="full__gallery">
+            <div class="full__buttons">
+                <a href="#!" class="black-button"><i class="fas fa-heart"></i>В избранное</a>
+                <a href="#!" class="black-button"><i class="fas fa-share"></i>Поделиться</a>
+            </div>
+            <a href="#!" class="black-button watch-all">Посмотреть фотографии</a>
+            <div class="swiper-container full__swiper">
+             <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="assets/img/random/1.jpg" rel="prettyPhoto[pp_gal]" title="You can add caption to pictures.">
+                        <div class="open_full"><i class="far fa-search"></i></div>
+                        <img src="assets/img/random/1.jpg" alt="img1">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/img/random/2.jpg" rel="prettyPhoto[pp_gal]" title="You can add caption to pictures.">
+                        <div class="open_full"><i class="far fa-search"></i></div>
+                        <img src="assets/img/random/2.jpg" alt="img1">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/img/random/3.jpg" rel="prettyPhoto[pp_gal]" title="You can add caption to pictures.">
+                        <div class="open_full"><i class="far fa-search"></i></div>
+                        <img src="assets/img/random/3.jpg" alt="img1">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/img/random/4.jpg" rel="prettyPhoto[pp_gal]" title="You can add caption to pictures.">
+                        <div class="open_full"><i class="far fa-search"></i></div>
+                        <img src="assets/img/random/4.jpg" alt="img1">
+                    </a>
+                </div>
+                
+            </div>
+                    
+                <!-- If we need navigation buttons -->
+                <div class="swiper-bp"><i class="far fa-arrow-left"></i></div>
+                <div class="swiper-bn"><i class="far fa-arrow-right"></i></div>
+            </div>
+        </div>
+        <div class="full__tabs">
+            <a href="#!" class="full__tab tactive" data-tab="1"><i class="fal fa-file-alt"></i>Описание</a>
+            <a href="#!" class="full__tab" data-tab="2"><i class="fal fa-map-marker-alt"></i>Местоположение</a>
+            <a href="#!" class="full__tab" data-tab="3"><i class="fal fa-calendar-alt"></i>Календарь</a>
+            <a href="#!" class="full__tab" data-tab="4"><i class="fal fa-comment-alt-lines"></i>Отзывы (20)</a>
+        </div>
+        <div class="full__row">
+            <div class="full__body">
+                <div class="full__content pactive" data-tab="1">
+                    <div class="fc__top">
+                        <span>Стоимость аренды за</span>
+                        <a href="#!">час</a>
+                        <a href="#!">пол дня</a>
+                        <a href="#!" class="cactive">день</a>
+                    </div>
+                    <div class="fc__price">
+                        <span>50 000 т</span>
+                    </div>
+                    <div class="fc__title">
+                        <i class="far fa-bullseye-arrow"></i>
+                        Для каких целей подходит?
+                    </div>
+                    <span class="fc__goal">
+                        Тренинги, мероприятия, встречи.
+                    </span>
+                    <div class="fc__title">
+                        <i class="far fa-users-class"></i>
+                        Рассадка
+                    </div>
+                    <div class="fc__seats">
+                        <a href="#!">
+                            <svg id="oso" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
+                                <g fill="none" fill-rule="evenodd" stroke="#000">
+                                    <rect width="53" height="53" x=".5" y=".5" rx="3"/>
+                                    <path fill="#000" d="M14.5 20.5h2v2h-2zM20.5 20.5h2v2h-2zM26.5 20.5h2v2h-2zM32.5 20.5h2v2h-2zM38.5 20.5h2v2h-2zM14.5 26.5h2v2h-2zM20.5 26.5h2v2h-2zM26.5 26.5h2v2h-2zM32.5 26.5h2v2h-2zM38.5 26.5h2v2h-2zM14.5 32.5h2v2h-2zM20.5 32.5h2v2h-2zM26.5 32.5h2v2h-2zM32.5 32.5h2v2h-2zM38.5 32.5h2v2h-2zM14.5 38.5h2v2h-2zM20.5 38.5h2v2h-2zM26.5 38.5h2v2h-2zM32.5 38.5h2v2h-2zM38.5 38.5h2v2h-2zM14.5 14.5h26v2h-26z"/>
+                                </g>
+                            </svg>
+                            <span>30 мест</span>      
+                        </a>
+                        <a href="#!">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
+                                <g fill="none" fill-rule="evenodd">
+                                    <rect width="53" height="53" x=".5" y=".5" stroke="#000" rx="3"/>
+                                    <g fill="#000">
+                                        <path d="M17 21h3v3h-3zM23 21h3v3h-3zM29 21h3v3h-3zM35 21h3v3h-3zM17 36h3v3h-3zM23 36h3v3h-3zM29 36h3v3h-3zM35 36h3v3h-3zM17 15h9v3h-9zM29 15h9v3h-9zM17 30h9v3h-9zM29 30h9v3h-9z"/>
+                                    </g>
+                                </g>
+                            </svg>
+                            <span>20 мест</span>      
+                        </a>
+                        <a href="#!" class="sactive">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
+                                    <g fill="none" fill-rule="evenodd">
+                                        <rect width="53" height="53" x=".5" y=".5" stroke="#000" rx="3"/>
+                                        <path fill="#000" d="M20 17h3v3h-3zM26 17h3v3h-3zM32 17h3v3h-3zM14 23h3v3h-3zM38 23h3v3h-3zM14 29h3v3h-3zM38 29h3v3h-3zM20 35h3v3h-3zM26 35h3v3h-3zM32 35h3v3h-3zM20 23h15v9H20z"/>
+                                    </g>
+                                </svg>  
+                                <span>16 мест</span>      
+                            </a>
+                    </div>
+                    <div class="fc__title">
+                        <i class="far fa-expand-alt"></i>
+                        Площадь и высота
+                    </div>
+                    <div class="fc__seats">
+                        <div>
+                            <img src="assets/img/svg/11.svg" alt="">
+                            <span>30 м2</span>
+                        </div>
+                        <div>
+                            <img src="assets/img/svg/12.svg" alt="">
+                            <span>3 м</span>
+                        </div>
+                    </div>
+                    <div class="fc__title">
+                        <i class="far fa-box-full"></i>
+                        Оснащение
+                    </div>
+                    <div class="fc__columns">
+                            <div class="fc__thing">
+                                <i class="fas fa-wifi"></i>
+                                Wi-fi
+                            </div>
+                            <div class="fc__thing  ">
+                                <i class="far fa-tv"></i>
+                                Большой экран
+                            </div>
+                            <div class="fc__thing  ">
+                                 <i class="fas fa-tv"></i>
+                                Большой экран
+                            </div>
+                            <div class="fc__thing  ">
+                                <i class="far fa-tv"></i>
+                                Большой экран
+                            </div>
+                            <div class="fc__thing ">
+                                <i class="far fa-tv"></i>
+                                Большой экран
+                            </div>
+                            <div class="fc__thing">
+                                <i class="far fa-tv"></i>
+                                Большой экран
+                            </div>
+                            <div class="fc__thing">
+                                <i class="far fa-tv"></i>
+                                Большой экран
+                            </div>
+                            <div class="fc__thing">
+                                <i class="far fa-tv"></i>
+                                Большой экран
+                            </div>
+                            <div class="fc__thing">
+                                <i class="far fa-tv"></i>
+                                Большой экран
+                            </div>
+                            <div class="fc__thing">
+                                <i class="far fa-tv"></i>
+                                Большой экран
+                            </div>
+                    </div>
+                    <div class="fc__title">
+                        <i class="far fa-coffee"></i>
+                        Дополнительные услуги
+                    </div>
+                    <div class="fc__columns fcsmall">
+                            <div class="fc__thing">
+                                <i class="fas fa-wifi"></i>
+                                Wi-fi
+                            </div>
+                            <div class="fc__thing">
+                                <i class="fas fa-wifi"></i>
+                                Wi-fi
+                            </div>
+                            <div class="fc__thing">
+                                <i class="fas fa-wifi"></i>
+                                Wi-fi
+                            </div>
+                            <div class="fc__thing">
+                                <i class="fas fa-wifi"></i>
+                                Wi-fi
+                            </div>
+                    </div>
+
+                    <div class="fc__title">
+                        <i class="far fa-parking"></i>
+                        Парковка
+                    </div>
+                    <div class="fc__seats">
+                        <div>
+                            <img src="assets/img/svg/13.svg" alt="">
+                            <span>Охраняемая</span>
+                        </div>
+                        <div>
+                            <img src="assets/img/svg/14.svg" alt="">
+                            <span>Бесплатная</span>
+                        </div>
+                        <div>
+                            <img src="assets/img/svg/15.svg" alt="">
+                            <span>60 мест</span>
+                        </div>
+                    </div>
+                    
+                    <div class="fc__title">
+                        <i class="far fa-minus-circle"></i>
+                        Ограничение
+                    </div>
+                    <div class="fc__columns nopro">
+                        <div class="fc__thing">
+                            <i class="fas fa-wifi"></i>
+                            Текст
+                        </div>
+                        <div class="fc__thing">
+                            <i class="fas fa-wifi"></i>
+                            Текст
+                        </div>
+                        <div class="fc__thing">
+                            <i class="fas fa-wifi"></i>
+                            Текст
+                        </div>
+                        <div class="fc__thing">
+                            <i class="fas fa-wifi"></i>
+                            Текст
+                        </div>
+                    </div>
+            </div> 
+            <div class="full__content" data-tab="2"></div>
+            <div class="full__content" data-tab="3"></div>
+            <div class="full__content" data-tab="4"></div>
+        </div>
+
+        <aside class="full__aside">
+                <div class="full__ablock full__ablock_first">
+                    <span class="ablock__title">Арендовать конференц-зал
+                            на указанную дату</span>
+                    <div class="ablock__row">
+                        <div class="ninput_wp nhero__main select_time" style="margin-right: 10px;">
+                                <i class="far fa-clock"></i>
+                                <select name="time" id="ntime" placeholder="Время начала">
+                                        <option selected>10:00</option>
+                                        <option>11:00</option>
+                                        <option>12:00</option>
+                                        <option>13:00</option>
+                                        <option>14:00</option>
+                                        <option>15:00</option>
+                                        <option>16:00</option>
+                                        <option>17:00</option>
+                                        <option>18:00</option>
+                                        <option>19:00</option>
+                                        <option>20:00</option>
+                                        <option>21:00</option>
+                                        <option>22:00</option>
+                                        <option>23:00</option>
+                                        <option>24:00</option>
+                                        <option>01:00</option>
+                                        <option>02:00</option>
+                                </select>
+                                <i class="far fa-angle-down"></i>
+                            </div>
+                            <div class="ninput_wp nhero__main select_date">
+                                <i class="far fa-calendar-alt"></i>
+                                    <input autocomplete="off" class="nhero-input" type="text" placeholder="Дата мероприятия" id="ndatepick">
+                            </div>
+                        </div>
+                    <div class="ablock__row">
+                            <div class="ninput_wp nhero__main select_time" style="margin-right: 10px;">
+                                <i class="far fa-clock"></i>
+                                <select name="time2" id="ntime2" placeholder="Время начала">
+                                        <option selected>10:00</option>
+                                        <option>11:00</option>
+                                        <option>12:00</option>
+                                        <option>13:00</option>
+                                        <option>14:00</option>
+                                        <option>15:00</option>
+                                        <option>16:00</option>
+                                        <option>17:00</option>
+                                        <option>18:00</option>
+                                        <option>19:00</option>
+                                        <option>20:00</option>
+                                        <option>21:00</option>
+                                        <option>22:00</option>
+                                        <option>23:00</option>
+                                        <option>24:00</option>
+                                        <option>01:00</option>
+                                        <option>02:00</option>
+                                </select>
+                                <i class="far fa-angle-down"></i>
+                            </div>
+                            <div class="ninput_wp nhero__main select_date">
+                                <i class="far fa-calendar-alt"></i>
+                                    <input autocomplete="off" class="nhero-input" type="text" placeholder="Дата мероприятия" id="ndatepick2">
+                            </div>
+                            
+                    </div>
+                    <div class="ablock__row row2">
+
+                    <div class="ninput_wp nhero__main nhero__short">
+                            <i class="far fa-user-friends"></i>
+                            <select name="guests" id="nguests" >
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option selected>9</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                    <option>13</option>
+                                    <option>14</option>
+                                    <option>15</option>
+                            </select>
+                            <i class="far fa-angle-down"></i>
+                        </div>
+                    </div>
+                    <div class="ablock__row row2">
+                        <div class="ninput_wp nhero__main nhero__short">
+                            <select name="type" id="ntype" >
+                                    <option>Совещание</option>
+                                    <option>Совещание</option>
+                                    <option>Совещание</option>
+                                    <option>Совещание</option>
+                                    <option>Совещание</option>
+                                    <option>Совещание</option>
+                            </select>
+                            <i class="far fa-angle-down"></i>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="full__ablock">
+                    <span class="ablock__title">Статистика</span>
+                    <p class="ablock__p">
+                            заинтересованности пользователей этим 
+                            конференц-залом.
+                    </p>
+                    <div class="ablock__stat">
+                        <div>
+                            <b>20</b>
+                            <span>за сегодня</span>
+                        </div>
+                        <div>
+                            <b>41</b>
+                            <span>за неделю</span>
+                        </div>
+                        <div>
+                            <b>138</b>
+                            <span>за месяц</span>
+                        </div>
+                        <div>
+                            <b>1209</b>
+                            <span>за все время</span>
+                        </div>
+                    </div>
+                    <div class="ablock__graph">
+                            <dl>
+                                <div class="percentage percentage-11"><span class="text">1</span><span class="nday">13</span></div>
+                                <div class="percentage percentage-49"><span class="text">49</span><span class="nday">14</span></div>
+                                <div class="percentage percentage-16"><span class="text">3</span><span class="nday">15</span></div>
+                                <div class="percentage percentage-9"><span class="text">9</span><span class="nday">16</span></div>
+                                <div class="percentage percentage-5"><span class="text">5</span><span class="nday">17</span></div>
+                                <div class="percentage percentage-20"><span class="text">20</span><span class="nday">18</span></div>
+                                <div class="percentage percentage-19"><span class="text">19</span><span class="nday">19</span></div>
+                                <div class="percentage percentage-22"><span class="text">22</span><span class="nday">20</span></div>
+                                <div class="percentage percentage-58"><span class="text">58</span><span class="nday">21</span></div>
+                                <div class="percentage percentage-32"><span class="text">32</span><span class="nday">22</span></div>
+                            </dl>
+                                  
+                    </div>
+                </div>
+        </aside>
+        </div>
+    </div>
+</section>
+<section class="same section">
+    <div class="section__wrapper same__wrapper">
+        <h2 class="section__h2">Похожие конференц-залы</h2>
+        <div class="same__row">
+            <div class="popular__block">
+    <div class="popular__slider">
+        <div class="popular__top">
+            <div class="popular__sale">-20%</div>
+            <a href="#!" class="popular__fav"><i class="fas fa-heart"></i></a>
+        </div>
+        <div class="swiper-container popular__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-bp"><i class="far fa-arrow-left"></i></div>
+            <div class="swiper-bn"><i class="far fa-arrow-right"></i></div>
+        
+        </div>
+    </div>
+    <div class="popular__body">
+        <a href="#!" class="popular__title">Галерея</a>
+        <a href="#!" class="popular__city">Казахстан / Алматы</a>
+        <div class="popular__r">
+            <div class="popular__users">
+                <i class="far fa-users"></i>
+                до 100 мест
+            </div>
+            <div class="popular__rank">
+                <i class="far fa-star"></i>
+                4.5
+            </div>
+        </div>
+    </div>
+    <div class="popular__footer">
+        <span class="popular__price">
+            30 000 ₸ / <b>день</b>   
+        </span>
+    </div>
+</div>
+            <div class="popular__block">
+    <div class="popular__slider">
+        <div class="popular__top">
+            <div class="popular__sale">-20%</div>
+            <a href="#!" class="popular__fav"><i class="fas fa-heart"></i></a>
+        </div>
+        <div class="swiper-container popular__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-bp"><i class="far fa-arrow-left"></i></div>
+            <div class="swiper-bn"><i class="far fa-arrow-right"></i></div>
+        
+        </div>
+    </div>
+    <div class="popular__body">
+        <a href="#!" class="popular__title">Галерея</a>
+        <a href="#!" class="popular__city">Казахстан / Алматы</a>
+        <div class="popular__r">
+            <div class="popular__users">
+                <i class="far fa-users"></i>
+                до 100 мест
+            </div>
+            <div class="popular__rank">
+                <i class="far fa-star"></i>
+                4.5
+            </div>
+        </div>
+    </div>
+    <div class="popular__footer">
+        <span class="popular__price">
+            30 000 ₸ / <b>день</b>   
+        </span>
+    </div>
+</div>
+            <div class="popular__block">
+    <div class="popular__slider">
+        <div class="popular__top">
+            <div class="popular__sale">-20%</div>
+            <a href="#!" class="popular__fav"><i class="fas fa-heart"></i></a>
+        </div>
+        <div class="swiper-container popular__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-bp"><i class="far fa-arrow-left"></i></div>
+            <div class="swiper-bn"><i class="far fa-arrow-right"></i></div>
+        
+        </div>
+    </div>
+    <div class="popular__body">
+        <a href="#!" class="popular__title">Галерея</a>
+        <a href="#!" class="popular__city">Казахстан / Алматы</a>
+        <div class="popular__r">
+            <div class="popular__users">
+                <i class="far fa-users"></i>
+                до 100 мест
+            </div>
+            <div class="popular__rank">
+                <i class="far fa-star"></i>
+                4.5
+            </div>
+        </div>
+    </div>
+    <div class="popular__footer">
+        <span class="popular__price">
+            30 000 ₸ / <b>день</b>   
+        </span>
+    </div>
+</div>
+            <div class="popular__block">
+    <div class="popular__slider">
+        <div class="popular__top">
+            <div class="popular__sale">-20%</div>
+            <a href="#!" class="popular__fav"><i class="fas fa-heart"></i></a>
+        </div>
+        <div class="swiper-container popular__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-bp"><i class="far fa-arrow-left"></i></div>
+            <div class="swiper-bn"><i class="far fa-arrow-right"></i></div>
+        
+        </div>
+    </div>
+    <div class="popular__body">
+        <a href="#!" class="popular__title">Галерея</a>
+        <a href="#!" class="popular__city">Казахстан / Алматы</a>
+        <div class="popular__r">
+            <div class="popular__users">
+                <i class="far fa-users"></i>
+                до 100 мест
+            </div>
+            <div class="popular__rank">
+                <i class="far fa-star"></i>
+                4.5
+            </div>
+        </div>
+    </div>
+    <div class="popular__footer">
+        <span class="popular__price">
+            30 000 ₸ / <b>день</b>   
+        </span>
+    </div>
+</div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer class="section footer">
+    <div class="section__wrapper footer__wrapper">
+        <div class="footer__top">
+      
+            <div class="footer__block">
+                <a href="#!" class="footer__logo"><img src="assets/img/logo.svg" alt=""></a>
+                <div class="footer__r">
+                    <div class="ninput_wp nhero__main footer__lang">
+                        <select name="lang" id="nlang" class="TFOlstFiltreImg" placeholder="Время начала">
+                                <option data-style="background-image: url(&apos;assets/img/svg/ru.svg&apos;);">RU</option>
+                                <option data-style="background-image: url(&apos;assets/img/svg/kz.svg&apos;);">KZ</option>
+                                <option data-style="background-image: url(&apos;assets/img/svg/uk.svg&apos;);">EN</option>
+                        </select>
+                        <i class="far fa-angle-down"></i>
+                    </div>
+                    <div class="ninput_wp nhero__main footer__money">
+                        <select name="val" class="selmenu" placeholder="Время начала">
+                                <option>KZT (Тенге)</option>
+                                <option>KZT (Тенге)</option>
+                                <option>KZT (Тенге)</option>
+                        </select>
+                        <i class="far fa-angle-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__block">
+                <h4 class="footer__title">Разделы</h3>
+                <a href="#!">Главная</a>
+                <a href="#!">О сервисе</a>
+                <a href="#!">Партнерам</a>
+                <a href="#!">Владельцам</a>
+                <a href="#!">Оплата</a>
+
+            </div>
+            <div class="footer__block">
+                <h4 class="footer__title">Сервисы</h3>
+                <a href="#!">Хостелы</a>
+                <a href="#!">Коворкинги</a>
+                <a href="#!">Конференц залы</a>
+                <a href="#!">Апартаменты</a>
+                <a href="#!">Ивенты</a>
+            </div>
+            <div class="footer__block">
+                <h4 class="footer__title">Страны</h3>
+                <a href="#!">Казахстан</a>
+                <a href="#!">Россия</a>
+                <a href="#!">Кыргызстан</a>
+                <a href="#!">Узбекистан</a>
+                <a href="#!">Беларусь</a>
+            </div>
+            <div class="footer__block">
+                <h4 class="footer__title">Подписка на новости</h3>
+                <div class="footer__mail">
+                    <input type="text" class="ninput" placeholder="Электронная почта">
+                    <button class="nbutton">Отправить</button>
+                </div>
+                <h4 class="footer__title">Социальные сети</h3>
+                <div class="footer__soc">
+                    <a href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#!"><i class="fab fa-instagram"></i></a>
+                    <a href="#!"><i class="fab fa-twitter"></i></a>
+                    <a href="#!"><i class="fab fa-vk"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__copyright">
+                <span>© 2017 - 2019 Flow System   |   Все права защищены.</span>
+            </div>
+            <div class="footer__shortlinks">
+                <span>
+                    <a href="#!">Политика конфиденциальности</a>   |   <a href="#!">Правила использования</a>    |   <a href="#!">Публичная офферта</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer End -->
+
+<script type="text/javascript" src="assets/libs/swiper/js/swiper.min.js"></script>
+<!-- <script type="text/javascript" src="assets/libs/pretty/js/jquery.prettyPhoto.js"></script> -->
+
+
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+
+
+
+
+</body>
+</html>

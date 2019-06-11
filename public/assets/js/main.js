@@ -37,7 +37,9 @@
       $(this).find(".swiper-bn").css("opacity", "0");
       $(this).find(".swiper-pagination").css("opacity", "0");
     }
-  );
+  ); 
+
+  
   // swiper
   var mySwiper = new Swiper ('.popular__swiper', {
     // Optional parameters
@@ -45,6 +47,7 @@
 
     // If we need pagination
     pagination: {
+      clickable: true,
       el: '.swiper-pagination',
     },
 
@@ -56,7 +59,44 @@
 
   })
 
-  
+  var mySwiper2 = new Swiper ('.full__swiper', {
+    // Optional parameters
+    loop: false,
+    slidesPerView: 3,
+    spaceBetween: 1,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-bn',
+      prevEl: '.swiper-bp',
+    },
+
+  })
+
+  // tabs
+  $('.full__tab').click(function() {
+    var id = $(this).attr('data-tab'),
+        content = $('.full__content[data-tab="'+ id +'"]');
+    
+    $('.full__tab.tactive').removeClass('tactive'); // 1
+    $(this).addClass('tactive'); // 2
+    
+    $('.full__content.pactive').removeClass('pactive'); // 3
+    content.addClass('pactive'); // 4
+ });
+ //
+
+  // pretty
+  $("a[rel^='prettyPhoto']").prettyPhoto({
+    theme: 'dark_square', /* light_rounded / dark_rounded / light_square / dark_square / facebook */
+  });
+
+  // select{}
+
+ $(".fc__seats a").click(function(){
+    $(".fc__seats a").removeClass("sactive");
+     $(this).addClass("sactive");
+ })
 
   // tooltip
   $( document ).tooltip({
@@ -188,9 +228,44 @@
     $( "#ntime" ).selectmenu().selectmenu( "menuWidget" ).addClass( "overflow" );
     $( "#ntime2" ).selectmenu().selectmenu( "menuWidget" ).addClass( "overflow" );
     $( "#nguests" ).selectmenu().selectmenu( "menuWidget" ).addClass( "overflow" );
+    $( "#ntype" ).selectmenu().selectmenu( "menuWidget" ).addClass( "overflow" );
     $(".selmenu").selectmenu({
         icons: { button: "far fa-angle-down" }
     });
+
+
+    //datepickers 2 
+
+    $("#ndatepick").datepicker({ 
+        dateFormat: 'yy-mm-dd',
+        changeMonth: true,
+        minDate: new Date(),
+        maxDate: '+2y',
+        onSelect: function(date){
+            var selectedDate = new Date(date);
+            var msecsInADay = 86400000;
+            var endDate = new Date(selectedDate.getTime() + msecsInADay);
+            console.log(selectedDate.getTime());
+           //Set Minimum Date of EndDatePicker After Selected Date of StartDatePicker
+            $("#ndatepick2").datepicker( "option", "minDate", endDate );
+            $("#ndatepick2").datepicker( "option", "maxDate", '+2y' );
+    
+        }
+    });
+    $("#ndatepick2").datepicker({ 
+        dateFormat: 'yy-mm-dd',
+        changeMonth: true,
+        
+    });
+    $( "#ndatepick" ).datepicker("setDate", "today" );
+    var selectedDate = new Date();
+    var msecsInADay = 86400000;
+    var endDate = new Date(selectedDate.getTime() + msecsInADay);
+    $( "#ndatepick2" ).datepicker("setDate", endDate);
+
+
+
+    
 
     // search field
 

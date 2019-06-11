@@ -204,6 +204,8 @@ background-repeat:no-repeat;
 
         &_main{
             padding: 20px;
+            display: flex;
+            justify-content: space-between;
         }
 
         &_n{
@@ -315,8 +317,8 @@ background-repeat:no-repeat;
               &:after{
                   top: 2px;
                   left: 2px;
-                  height: 13px;
-                  width: 13px;
+                  height: 12px;
+                  width: 12px;
               }
           }
       }
@@ -358,3 +360,137 @@ background-repeat:no-repeat;
 
       }
   }
+
+  .open_full{
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 14px;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      left: 50%;
+      opacity: 0;
+
+      &:hover{
+        background-color: rgba(0, 0, 0, 1);
+      }
+
+  }
+
+  .black-button{
+    height: 40px;
+    border-radius: 4px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.67;
+
+    i{
+        margin-right: 8px;
+    }
+
+    &:hover{
+        background-color: rgba(0, 0, 0, 1);
+        text-decoration: none;
+    }
+  }
+
+  .watch-all{
+      position: absolute;
+      bottom: 30px;
+      z-index: 99;
+      left: 30px;
+  }
+
+
+  dl {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    height: 150px;
+    margin-top: 0;
+    position: relative;
+    justify-content: space-around;
+    border-bottom: 1px solid #e8e8e8;
+    justify-content: space-around;
+
+  }
+  
+  .text {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+  }
+  
+  .percentage {
+    display: block;
+    min-width: 10px;
+    height: 100%;
+    position: relative;
+    
+    &:after {
+      content: "";
+      display: block;
+      background-color: $mainColor;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      bottom: 0;
+      border-radius: 2px;
+      left: 0;
+      transition: background-color .3s ease;
+      cursor: pointer;
+    }
+    &:hover,
+    &:focus {
+      &:after {
+         background-color: #aaa; 
+      }
+    }
+  }
+
+  .nday{
+    position: absolute;
+    width: 100%;
+    bottom: -25px;
+    font-size: 12px;
+    line-height: 1.67;
+    color: rgba(0, 0, 0, 0.45);
+  }
+  
+  @for $i from 1 through 100 {
+    .percentage-#{$i} {
+      &:after {
+        $value: ($i * 1%);
+        height:  $value;
+      }
+      .text{
+        $value: ($i * 1% +2);
+        bottom: $value;
+      }
+    }
+  }
+  
+ 
