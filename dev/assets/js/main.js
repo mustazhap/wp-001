@@ -87,9 +87,12 @@
  //
 
   // pretty
-  $("a[rel^='prettyPhoto']").prettyPhoto({
-    theme: 'dark_square', /* light_rounded / dark_rounded / light_square / dark_square / facebook */
-  });
+  if( $("a[rel^='prettyPhoto']").length){
+    $("a[rel^='prettyPhoto']").prettyPhoto({
+        theme: 'dark_square', /* light_rounded / dark_rounded / light_square / dark_square / facebook */
+      });
+  }
+ 
 
   // select{}
 

@@ -1,0 +1,189 @@
+.map{
+    background: rgba(#ccc, 0.3);
+    position: relative;
+    &__wrapper{
+        padding-top: 40px;
+        padding-bottom: 60px;
+        position: absolute;
+        display: flex;
+    }
+
+    &__tooltip{
+        font-size: 14px;
+        font-weight: 600;
+        color: #ffffff;
+        padding-left: 25px;
+        padding-right: 25px;
+        height: 35px;
+        border-radius: 5px;
+        background: rgba(black, 0.5);
+        display: flex;
+        align-items: center;
+        width: max-content;
+        position: relative;
+        &:after{
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-10px);
+            border-style: solid;
+            border-width: 10px 10px 0 10px;
+            border-color: rgba(black, 0.5) transparent transparent transparent;
+        }
+    }
+
+    .ninput_wp{
+        height: 40px;
+        margin-bottom: 10px;
+    }
+    .select_city .ui-selectmenu-button{
+        height: 40px !important;
+    }
+    .ninput_wp .nhero-input{
+        height: 40px;
+        box-shadow: none;
+        border: 1px solid #e6e6e6;
+    }
+    .nhero__button{
+        width: 100%;
+        height: 40px;
+        margin-top: 5px;
+    }
+
+    &__aside{
+        margin-right: 30px;
+        
+    }
+
+    &__body{
+        position: relative;
+    }
+
+    &__list{
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(black, 0.5);
+        color: white;
+        border-radius: 3px;
+        font-size: 10px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: max-content;
+        font-weight: 600;
+
+        i{
+            margin-right: 8px;
+            font-size: 13px;
+        }
+        &:hover{
+            text-decoration: none;
+            background: rgba(black, 1);
+
+        }
+    }
+
+    &__card{
+        display: flex;
+        border-radius: 3px;
+        padding: 20px;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+        background-color: #ffffff;
+        width: 377px;
+        max-width: 377px;
+    }
+}
+
+.mc{
+    
+    &__left{
+        display: flex;
+        flex-direction: column;
+        .nbutton{
+            height: 30px;
+            width: 90px;
+            font-size: 9px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+    }
+    &__img{
+        width: 90px;
+        height: 90px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: auto;
+            height: 100%;
+        }
+    }
+    
+    &__right{
+        margin-left: 25px;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        .popular__body{
+            width: 100%;
+            padding: 0;
+        }
+        .popular__r{
+            width: 100%;
+        }
+        .popular__price{
+            font-size: 16px;
+        }
+    }
+    
+}
+
+.ninput_wp .ui-selectmenu-icon.ui-icon{
+    display: none;
+}
+
+.mapholder{
+    height: 1900px;
+    width: 100%;
+}
+
+.map__marker{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &_ex2{
+        left: 60%;
+        top: 40%;
+    }
+}
+.marker{
+    width: 50px;
+    height: 50px;
+    background: $mainColor;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin-top: 15px;
+
+    &:hover{
+        text-decoration: none;
+    }
+}
