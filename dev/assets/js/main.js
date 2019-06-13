@@ -1,7 +1,19 @@
 $(document).ready(function(){
     var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
   
-  
+    $("#show-map").click(function(){
+        $(".s-map").show();
+        $(".s-result").hide();
+        $(".nresult").addClass("map").removeClass("nresult");
+        $(".nresult__wrapper").addClass("map__wrapper").removeClass("nresult__wrapper");
+    })
+    $("#show-list").click(function(){
+        $(".s-map").hide();
+        $(".s-result").show();
+        $(".map").addClass("nresult").removeClass("map");
+        $(".map__wrapper").addClass("nresult__wrapper").removeClass("map__wrapper");
+    })
+
     // fileupload имаге - image
     function readURL(input) {
       if (input.files && input.files[0]) {
@@ -213,8 +225,10 @@ $(document).ready(function(){
   
       $( "#datepick" ).datepicker();
       $( "#ntime" ).selectmenu().selectmenu( "menuWidget" ).addClass( "overflow" );
+      $( ".ntime" ).selectmenu().selectmenu( "menuWidget" ).addClass( "overflow" );
       $( "#ntime2" ).selectmenu().selectmenu( "menuWidget" ).addClass( "overflow" );
       $( "#nguests" ).selectmenu().selectmenu( "menuWidget" ).addClass( "overflow" );
+      $( ".nguests" ).selectmenu().selectmenu( "menuWidget" ).addClass( "overflow" );
       $( "#ntype" ).selectmenu().selectmenu( "menuWidget" ).addClass( "overflow" );
       $(".selmenu").selectmenu({
           icons: { button: "far fa-angle-down" }

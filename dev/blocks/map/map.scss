@@ -33,31 +33,33 @@
         }
     }
 
-    .ninput_wp{
-        height: 40px;
-        margin-bottom: 10px;
-    }
-    .select_city .ui-selectmenu-button{
-        height: 40px !important;
-    }
-    .ninput_wp .nhero-input{
-        height: 40px;
-        box-shadow: none;
-        border: 1px solid #e6e6e6;
-    }
-    .nhero__button{
-        width: 100%;
-        height: 40px;
-        margin-top: 5px;
-    }
+    
 
     &__aside{
         margin-right: 30px;
+        .ninput_wp{
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        .select_city .ui-selectmenu-button{
+            height: 40px !important;
+        }
+        .ninput_wp .nhero-input{
+            height: 40px;
+            box-shadow: none;
+            border: 1px solid #e6e6e6;
+        }
+        .nhero__button{
+            width: 100%;
+            height: 40px;
+            margin-top: 5px;
+        }
         
     }
 
     &__body{
         position: relative;
+        width: 100%;
     }
 
     &__list{
@@ -154,7 +156,7 @@
 }
 
 .mapholder{
-    height: 1900px;
+    height: 1940px;
     width: 100%;
 }
 
@@ -186,4 +188,8 @@
     &:hover{
         text-decoration: none;
     }
+}
+
+.s-map{
+    display: none;
 }

@@ -1,12 +1,14 @@
 <section class="nresult section" id="nresult">
+    <div class="mapholder s-map">There is map</div>
+
     <div class="section__wrapper nresult__wrapper">
 	    @@include("../elements/breadcrumbs.html")
         
-        <h2 class="section__h2">
+        <h2 class="section__h2 s-result">
             Поиск конференц залов
         </h2>
 
-        <div class="nresult__search">
+        <div class="nresult__search s-result">
             <div class="ninput_wp nhero__main select_city">
             <i class="far fa-map-marker-alt"></i>
             <select name="ncity" id="ncity" class="selmenu nhero-search">
@@ -94,12 +96,14 @@
                     <i class="far fa-angle-down"></i>
                 </div>
         <button class="nbutton nbutton_main nhero__button">Найти</button>
-                
-
         </div>
+
         <div class="nresult__row">
-	        @@include("../elements/filter.html")
-            <div class="nresult__block">
+            <aside class="map__aside">
+                    @@include("../elements/search.html")
+                    @@include("../elements/filter.html")
+            </aside>
+            <div class="nresult__block s-result">
                 <h3 class="nresult__title">Алматы: 365 концферен-залов найдено</h3>
                 <div class="nresult__top">
                     <div class="nresult__filter">
@@ -108,7 +112,7 @@
                         <a href="#!">Все конференц залы</a>
                         <a href="#!">Только отели</a>
                     </div>
-                    <a href="#!" class="nbutton nbutton_white nresult__map">
+                    <a href="#!" class="nbutton nbutton_white nresult__map" id="show-map">
                             <i class="far fa-map-marker-alt"></i>
                             Посмотреть на карте
                     </a>
@@ -138,6 +142,55 @@
                     <a href="#!"><i class="far fa-chevron-right"></i></a>
                 </div>
             </div>
+            <div class="map__body s-map">
+                    <a href="#!" class="map__list" id="show-list">
+                            <i class="far fa-list"></i>
+                            Посмотреть список
+                    </a>
+        
+                    <div class="map__marker">
+                        <div class="map__card">
+                                <div class="mc__left">
+                                    <div class="mc__img">
+                                        <img src="assets/img/random/1.jpg" alt="">
+                                    </div>
+                                    <a href="#!" class="nbutton nbutton_main ">Посмотреть</a>
+                                </div>
+                                <div class="mc__right">
+                                <div class="popular__body">
+                                    <a href="#!" class="popular__title">Галерея</a>
+                                    <a href="#!" class="popular__city">Казахстан / Алматы</a>
+                                    <div class="popular__r">
+                                        <div class="popular__users">
+                                            <i class="far fa-users"></i>
+                                            до 100 мест
+                                        </div>
+                                        <div class="popular__rank">
+                                            <i class="far fa-star"></i>
+                                            4.5
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <span class="popular__price">
+                                        30 000 ₸ / <b>день</b>   
+                                </span>
+                                </div>
+                            </div>
+                        <a href="#!" class="marker">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </a>
+                    </div>
+        
+                    <div class="map__marker map__marker_ex2">
+                        <div class="map__tooltip">
+                            85 000 т
+                        </div>
+                        <a href="#!" class="marker">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </a>
+                    </div>
+                </div>
         </div>
     </div>
 </section>
