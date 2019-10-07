@@ -8,7 +8,7 @@ html, body{
   padding: 0;
   height: 100%;
   min-height: 100%;
-  font-family: $Montserrat;
+  font-family: $Roboto;
   color: #5d6475;
   box-sizing: border-box;
   position: relative;
@@ -47,26 +47,37 @@ h1, h2, h3, h4, p{
 // import files of blocks [Basic]d
 @import "../../blocks/section/section";
 
-// Index
+// Index //Главная
 @import "../../blocks/header/header";
-@import "../../blocks/hero/hero";
-@import "../../blocks/result/result";
-@import "../../blocks/single/single";
-@import "../../blocks/aside/aside";
-@import "../../blocks/search/search";
-@import "../../blocks/catalog/catalog";
-@import "../../blocks/sidebar/sidebar";
-@import "../../blocks/profile/profile";
-@import "../../blocks/reservation/reservation.scss";
-@import "../../blocks/fav/fav.scss";
-@import "../../blocks/inbox/inbox.scss";
-@import "../../blocks/listing/listing.scss";
-@import "../../blocks/property/property.scss";
-@import "../../blocks/popular/popular.scss";
-@import "../../blocks/advantages/advantages.scss";
-@import "../../blocks/elements/elements.scss";
-@import "../../blocks/full/full.scss";
-@import "../../blocks/map/map.scss";
+@import "../../blocks/elements/elements";
+@import "../../blocks/slider/slider";
+@import "../../blocks/news/news";
+@import "../../blocks/about/about";
+@import "../../blocks/team/team";
+@import "../../blocks/contacts/contacts";
+@import "../../blocks/support/support";
+
+
+//AboutUs //Об учереждении
+@import "../../blocks/aboutus/aboutus";
+
+//Management //Руководство
+@import "../../blocks/management/management";
+
+//notice-single.html //Объявления отдельный пост
+@import "../../blocks/notice/notice";
+
+//agenda.html //Объявления все
+@import "../../blocks/agenda/agenda";
+
+//procurement.html //Госзакупки
+@import "../../blocks/procurement/procurement";
+
+
+
+
+
+
 
 
 

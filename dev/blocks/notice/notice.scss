@@ -1,0 +1,26 @@
+.notice{
+    &__wrapper{
+        padding-top: 35px;
+        padding-bottom: 100px;
+    }
+    &__date{
+        margin-top: 7px;
+        margin-bottom: 19px;
+        display: block;
+        color: #93adc4;
+        font-family: "Open Sans";
+        font-size: 12px;
+        font-weight: 300
+    }
+    &__img{
+        float: left;
+        margin-right: 30px;
+    }
+    &__body{
+        color: #002858;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 26px;
+        
+    }
+}

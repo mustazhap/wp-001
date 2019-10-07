@@ -9,3 +9,73 @@
     }
   }
 }
+
+// Tablet -> mock 768px
+@media screen and (max-width: 870px){
+  .section{
+    &__wrapper{
+       padding-left: 40px;
+       padding-right: 40px;
+    }
+  }
+
+  // header
+  .nav__logo{
+    display: none;
+  }
+  .navlist{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    a{
+
+    }
+  }
+  .header__menu{
+    display: none;
+  }
+  .header__logo{
+    display: block;
+  }
+}
+
+// Phone -> mock 576px
+@media screen and (max-width: 680px){
+  .section{
+    &__wrapper{
+       padding-left: 40px;
+       padding-right: 40px;
+    }
+  }
+
+  // header
+  .nav__logo{
+    display: none;
+  }
+  .navlist{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    a{
+
+    }
+  }
+  .header__menu{
+    display: none;
+  }
+  .header__logo{
+    display: block;
+  }
+  .header__glass{
+    display: none;
+  }
+  a.header__help{
+    margin-right: 30px;
+  }
+  .header__left{
+    flex-direction: row-reverse;
+  }
+  a.header__lang{
+    margin-right: 0;
+  }
+}

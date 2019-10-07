@@ -2,19 +2,32 @@
     display: flex;
     justify-content: center;
 
+    &_grey{
+      background-color: #eff2f4;
+    }
+
     &__wrapper{
       width: 1110px;
 
       &_full{
         width: 100%;
       }
+
+      &_padding{
+        padding: 70px 0 80px 0px;
+      }
     }
 
     &__title{
-      font-weight: bold;
-      color: $text;
-      font-size: 28px;
-      text-align: center;
+      color: #0253b3;
+      font-size: 30px;
+      font-weight: 700;
+    }
+    &__title_h3{
+      color: #0253b3;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 36px;
     }
 
     &__h2{
@@ -41,257 +54,113 @@
   }
   
 
-.abody{
-  display: flex;
+.parallax-bg{
+  position: absolute;
   width: 100%;
-  padding-top: 70px;
-  height: max-content;
-  min-height: calc(100% - 70px);
-  padding-left: 275px;
-  position: relative;
-  
+  height: 100%;
 }
-
-.abody-top{
-  width: 100%;
-  height: 110px;
-  background-color: #f4f6f9;
-  padding-left: 25px;
-  display: flex;
-  align-items: center;
-  color: #4d5567;
-  justify-content: space-between;
-  padding-right: 30px;
-  h1{
-      font-weight: 700;
-      font-size: 24px;
-      text-transform: uppercase;
-  }
-
-  a{
-      color: #5D6469;
-      font-size: 15px;
-      transition: color 0.2s linear;
-
-      &:hover{
-          text-decoration: none;
-          color: $green;
-      }
-  }
-}
-
-//input
-
-
-.inputfile {
-  width: 0.1px;
-  height: 0.1px;
-  opacity: 0;
-  overflow: hidden;
+.parallax-circle{
+  border-radius: 50%;
   position: absolute;
   z-index: -1;
-}
-
-.inputfile + label {
-  font-size: 1.25rem;
-  /* 20px */
-  font-weight: 700;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  cursor: pointer;
-  display: inline-block;
-  overflow: hidden;
-  /* 10px 20px */
-}
-
-.no-js .inputfile + label {
-  display: none;
-}
-
-.inputfile:focus + label,
-.inputfile.has-focus + label {
-  // outline: 1px dotted #000;
-  // outline: -webkit-focus-ring-color auto 5px;
-}
-
-.inputfile + label * {
-   pointer-events: none;
-  /* in case of FastClick lib use */
-}
-
-.inputfile + label svg {
-  width: 1em;
-  height: 1em;
-  vertical-align: middle;
-  fill: currentColor;
-  margin-top: -0.25em;
-  /* 4px */
-  margin-right: 0.25em;
-  /* 4px */
-}
-
-
-/* style 1 */
-
-.inputfile-1 + label {
-  color: white;
-  height: 43px;
-  border-radius: 2px;
-  background-color: $green;
-  font-size: 16px;
-    line-height: 18px;
-    font-weight: 600;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.inputfile-1:focus + label,
-.inputfile-1.has-focus + label,
-.inputfile-1 + label:hover {
-  opacity: 0.8;
-}
-
-
-.f{
-  display: flex;
-}
-
-.fc{
-  display: flex;
-  flex-direction: column;
-}
-
-.fca{
-  align-items: center;
-}
-
-.fcj{
-  justify-content: center;
-}
-
-
-.greenButton{
-  width: 100%;
-  color: #fff;
-  max-width: 200px;
-  font-size: 16px;
-  line-height: 18px;
-  cursor: pointer;
-  font-weight: 600;
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: $green;
-  height: 43px;
-
-  &:hover{
-      opacity: 0.8e;
+  &-1{
+    width: 99px;
+    height: 99px;
+    border: 15px solid #ffbc65;
+    opacity: 0.1;
+    left: 10%;
+    top: -70px;
   }
-}
-
-.grayButton{
-  background-color: #e8ebf0;
-}
-
-.redButton{
-  background-color: #fd2d4f;
-}
-
-.donthave{
-  font-size: 16px;
-  line-height: 1.3em;
-  margin-bottom: 15px;
-  color: #5d6475;
-  font-weight: 600;
-}
-
-.ui-tooltip, .arrow{
-  background: #000;
-  color: white;
-  font-size: 12px;
-  box-shadow: none;
-  border-radius: 0;
-  border: none;
-  padding: 5px;
-  text-align: center;
-  border-color: black;
-  padding-left: 5px;
-}
-.ui-tooltip{
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.cl3{
-  width: 25%;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.cl4{
-  width: 30%;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.cl6{
-  width: 50%;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.img-delete{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 20px;
-  width: 30px;
-  height: 30px;
-  background: $green;
-  color: white;
-  cursor: pointer;
-}
-
-.fileButton{
-  position: relative;
-  
-  label{
-      color: white !important;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
+  &-2{
+    width: 202px;
+    height: 202px;
+    border: 25px solid #0253b3;
+    left: 30%;
+    opacity: 0.03;
+    top: 100px;
+  }
+  &-3{
+    width: 202px;
+    height: 202px;
+    border: 25px solid #0253b3;
+    opacity: 0.05;
+    right: 0%;
+    bottom: -90px;
+  }
+  &-4{
+    width: 362px;
+    height: 362px;
+    border: 30px solid #ffbc65;
+    opacity: 0.18;
+    left: 10%;
+    bottom: -220px;
+  }
+  &-5{
+    width: 99px;
+    height: 99px;
+    border: 15px solid #ffbc65;
+    opacity: 0.1;
+    left: 10%;
+    top: 150px;
   }
 
-  &_img{
-      max-height: 183px;
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-      max-width: 220px;
-      margin-bottom: 10px;
-      display: none;
-      align-items: center;
-      justify-content: center;
-
-      img{
-          width: 100%;
-          height: 100%;
-      }
+  &-6{
+    width: 202px;
+    height: 202px;
+    border: 25px solid #0253b3;
+    opacity: 0.1;
+    left: 50%;
+    top: 370px;
   }
 
-  input{
-      opacity: 0;
-      z-index: 1;
-      cursor: pointer;
-      width: 100%;
-      height: 100%;
-      position: absolute;
+  &-7{
+    width: 362px;
+    height: 362px;
+    border: 30px solid #ffbc65;
+    opacity: 0.12;
+    left: 10%;
+    bottom: -330px;
+  }
+  &-8{
+    width: 202px;
+    height: 202px;
+    border: 25px solid #0253b3;
+    opacity: 0.12;
+    right: 0%;
+    bottom: -500px;
+  }
+
+  &-9{
+    width: 99px;
+    height: 99px;
+    border: 15px solid #ffbc65;
+    opacity: 0.19;
+    left: 10%;
+    top: 600px;
+  }
+  &-10{
+    width: 202px;
+    height: 202px;
+    border: 25px solid #0253b3;
+    opacity: 0.06;
+    left: 30%;
+    top: 300px;
+  }
+  &-11{
+    width: 362px;
+    height: 362px;
+    border: 30px solid #ffbc65;
+    opacity: 0.25;
+    right: -10%;
+    top: 500px;
+  }
+
+  &-12{
+    width: 202px;
+    height: 202px;
+    border: 25px solid #0253b3;
+    opacity: 0.05;
+    left: 15%;
+    top: 1350px;
   }
 }
