@@ -1,21 +1,4 @@
-# front of site Fashion
+# front of site wp-001
 
-back: Akberdi Otkelbay  
-front: Mustazhap Rustem 
-
-
-#to do:
-- [x] Admin Posts
-- [x] Admin no jobs
-- [x] Admin Post
-- [x] Contact Page
-- [x] Job Open Page
-- [x] Apply popup
-- [x] Job Search Page 
-- [ ] Main Page - Carousel.JS / Adaptive
-- [ ] Pricing Page 
-- [ ] About Page - Adaptive
-- [x] Sign in 
-- [x] Sign Up
-- [ ] Bags, other features
-
+npm i - for install
+gulp - for run tasks
