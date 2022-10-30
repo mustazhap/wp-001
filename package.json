@@ -14,7 +14,7 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/campred/landing-page#readme",
   "devDependencies": {
-    "browser-sync": "^2.23.6",
+    "browser-sync": "^2.27.10",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-concat": "^2.6.1",
