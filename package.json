@@ -15,7 +15,7 @@
   "homepage": "https://bitbucket.org/campred/landing-page#readme",
   "devDependencies": {
     "browser-sync": "^2.23.6",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-concat": "^2.6.1",
     "gulp-file-include": "^2.0.1",
